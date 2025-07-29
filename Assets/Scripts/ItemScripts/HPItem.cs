@@ -2,14 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HPItem : MonoBehaviour
+namespace Item
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    public class HPItem : BaseItem
     {
-        if (collision.CompareTag("Player"))
+        private void OnTriggerEnter2D(Collider2D collision)
         {
-            //player.speed += 0.5f; 플레이어 혹은 맵에 스피드 올려주기 혹은 따로 메서드를 만들어서 코루틴으로 다시 줄여도 될 것 같음
-            //속도 증가 로직
+            if (collision.CompareTag("Player"))
+            {
+                ChangeHP(10);
+
+            }
+        }
+
+        public override void ChangeHP(int HP)
+        {
+            //player.hp += 10; 플레이어 체력 증가
+            //따로 UI에 Health 관련이 있다면 거기서 속성값 가져와서 변경
         }
     }
 }
