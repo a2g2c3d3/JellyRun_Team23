@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cb6033c91fc9e604cb31b02ece5c29ed
+guid: 195089be9b3063d4b9b534ce919a7aa0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: thicc n juicy free_0
+      name: Player_0
       rect:
         serializedVersion: 2
         x: 17
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e56ea91a5956cf54eba997de18aec65f
-      internalID: -1897914508
+      spriteID: 216291f7c06c95e4fb998435a0f44cda
+      internalID: -1459007657
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thicc n juicy free_1
+      name: Player_1
       rect:
         serializedVersion: 2
         x: 49
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c56349c4ba010f40a5561055c330ab3
-      internalID: -547438568
+      spriteID: 40a708c04ba01e4488a6cab3c10e0f5f
+      internalID: 1321672308
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thicc n juicy free_2
+      name: Player_2
       rect:
         serializedVersion: 2
         x: 80
@@ -192,14 +192,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53075918e88785a44a90ba2a88386821
-      internalID: 1194140323
+      spriteID: feddc4c77acc3914892680c365483709
+      internalID: 1300223466
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thicc n juicy free_3
+      name: Player_3
       rect:
         serializedVersion: 2
         x: 112
@@ -213,14 +213,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3d7418f2f4e440439ea3832dc1293a8
-      internalID: -1535784922
+      spriteID: 69d40387fe60ab24db6fbb8b04686260
+      internalID: 218940608
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thicc n juicy free_4
+      name: Player_4
       rect:
         serializedVersion: 2
         x: 144
@@ -234,14 +234,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00a950bcff864bb44be3faf67a84c745
-      internalID: 2096026428
+      spriteID: 81486dc4e881787438d1a7e234e3e02a
+      internalID: 1536125274
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thicc n juicy free_5
+      name: Player_5
       rect:
         serializedVersion: 2
         x: 176
@@ -255,14 +255,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3042d3d3f53bfdb4691aaffb3cd24503
-      internalID: -1235507595
+      spriteID: 356ded2c190a91c4784230dd4d3a8f94
+      internalID: -861899519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thicc n juicy free_6
+      name: Player_6
       rect:
         serializedVersion: 2
         x: 208
@@ -276,14 +276,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 363674401054f174f8e22210e5f04f7c
-      internalID: -226548333
+      spriteID: b13f3f7f02fd87d48aa52a4dbc7f0981
+      internalID: -624660396
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thicc n juicy free_7
+      name: Player_7
       rect:
         serializedVersion: 2
         x: 241
@@ -297,14 +297,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c04f9ae5ea85330408e5c388c0f80ed6
-      internalID: -2050234482
+      spriteID: 7ae55ba05bf03cd459859d2362069592
+      internalID: -72775519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thicc n juicy free_8
+      name: Player_8
       rect:
         serializedVersion: 2
         x: 17
@@ -318,14 +318,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3905f6912c9ec04ca24466db2731562
-      internalID: 398993056
+      spriteID: 50545e5e998625f40b6143ecabe1419b
+      internalID: 1903395474
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thicc n juicy free_9
+      name: Player_9
       rect:
         serializedVersion: 2
         x: 49
@@ -339,14 +339,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 761574f69c491c74485ead12e0a5b479
-      internalID: 85552120
+      spriteID: 22f2f3bc2a6464749a558bf8a3cc6c4e
+      internalID: -1089419289
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thicc n juicy free_10
+      name: Player_10
       rect:
         serializedVersion: 2
         x: 81
@@ -360,14 +360,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b97df9e86d485f4c9dd5465ddfae2d9
-      internalID: 180482072
+      spriteID: 3d33b823ea1ae794ea2d07493f6200e3
+      internalID: -1555410788
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thicc n juicy free_11
+      name: Player_11
       rect:
         serializedVersion: 2
         x: 113
@@ -381,14 +381,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eaafe93f38a20d84c94c643827f72a08
-      internalID: -661784549
+      spriteID: 4bb56f0fa040bac419cac80f90544982
+      internalID: -249345902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thicc n juicy free_12
+      name: Player_12
       rect:
         serializedVersion: 2
         x: 145
@@ -402,14 +402,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc41a6a19445d9b42bb88539d7d1a443
-      internalID: -2093251526
+      spriteID: 3a82f1a1d5f941c4bab7d4dcfbddbe8a
+      internalID: 188064794
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thicc n juicy free_13
+      name: Player_13
       rect:
         serializedVersion: 2
         x: 177
@@ -423,14 +423,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0e531feef80b0a468992f982afc6347
-      internalID: 2026788576
+      spriteID: 4aa9f6e48ec820d4c898179dd64373e6
+      internalID: -1409959315
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thicc n juicy free_14
+      name: Player_14
       rect:
         serializedVersion: 2
         x: 209
@@ -444,20 +444,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 655d012ec45ab8c4386f3b083bd29d44
-      internalID: 637565798
+      spriteID: 1ea0fc72b44f1c1408d9cd16d7cad8ee
+      internalID: 1343601515
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thicc n juicy free_15
+      name: Player_15
       rect:
         serializedVersion: 2
         x: 241
-        y: 111
+        y: 112
         width: 14
-        height: 20
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -465,14 +465,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bca1ac3b879f6884da5079a94eb94eb6
-      internalID: 1689880778
+      spriteID: 94a6184d370b7384d81d8c6a3fb44ca6
+      internalID: 1666446676
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thicc n juicy free_16
+      name: Player_16
       rect:
         serializedVersion: 2
         x: 17
@@ -486,14 +486,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a18db88702fb3d44c8ee17519a57aed9
-      internalID: 658751527
+      spriteID: 31e9168ea8205a54eb2141cd9108a992
+      internalID: -818290398
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thicc n juicy free_17
+      name: Player_17
       rect:
         serializedVersion: 2
         x: 49
@@ -507,14 +507,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bcf2dc86d587af14eac8ac6f83ed0839
-      internalID: -548361012
+      spriteID: ee742f9af5d5feb45b9f3496ee7b766d
+      internalID: -742267282
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thicc n juicy free_18
+      name: Player_18
       rect:
         serializedVersion: 2
         x: 81
@@ -528,14 +528,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9278ab14194d6954898cbc5f344de7d4
-      internalID: 1377139455
+      spriteID: 65a1a9ea2cb211646a337da25b08672a
+      internalID: 1602168951
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thicc n juicy free_19
+      name: Player_19
       rect:
         serializedVersion: 2
         x: 113
@@ -549,14 +549,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29db83f21fde2534da58429965e6cceb
-      internalID: 2078238748
+      spriteID: 03ca1d87536a35e4086ce5929231b1d5
+      internalID: 567681572
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thicc n juicy free_20
+      name: Player_20
       rect:
         serializedVersion: 2
         x: 145
@@ -570,14 +570,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f80725260158383499474f326d4871cd
-      internalID: 542844928
+      spriteID: 2a9d423342486f248beaf8c74bc66924
+      internalID: 1020317842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thicc n juicy free_21
+      name: Player_21
       rect:
         serializedVersion: 2
         x: 177
@@ -591,14 +591,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94d449f4aabe4bb48b67216c41149ac4
-      internalID: 2116993723
+      spriteID: 64433cac6fa5c8f439a8bd7db9244861
+      internalID: 1650333460
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thicc n juicy free_22
+      name: Player_22
       rect:
         serializedVersion: 2
         x: 209
@@ -612,14 +612,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 842d0bd14b2cdcc4c8ef0efcad16ad0d
-      internalID: -1748918598
+      spriteID: 3d2e74439820bdb4ea085b06abc64f4b
+      internalID: 941447634
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thicc n juicy free_23
+      name: Player_23
       rect:
         serializedVersion: 2
         x: 241
@@ -633,14 +633,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cea698b4ce45c64b892d4e0a5cce923
-      internalID: 2062969990
+      spriteID: 8e4b52c7d2f49484a824d92afc4c1681
+      internalID: -62103840
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thicc n juicy free_24
+      name: Player_24
       rect:
         serializedVersion: 2
         x: 273
@@ -654,14 +654,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c36553a22a953ee43a89a669fdd58183
-      internalID: 1088066990
+      spriteID: ff09d254b8fee7b4faf8421d5f2adef5
+      internalID: -1717360962
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thicc n juicy free_25
+      name: Player_25
       rect:
         serializedVersion: 2
         x: 305
@@ -675,14 +675,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8d38492046d45741aed5e9cade5af54
-      internalID: 418340372
+      spriteID: 9d4a25e4bb1a8484dbc85d8204e2b51f
+      internalID: -1938417889
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thicc n juicy free_26
+      name: Player_26
       rect:
         serializedVersion: 2
         x: 337
@@ -696,20 +696,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54c3d2f1f043090419257505c64e288e
-      internalID: -740624873
+      spriteID: 17d62a6d5bb6b2d4c968721d1a4814ed
+      internalID: 931721797
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thicc n juicy free_27
+      name: Player_27
       rect:
         serializedVersion: 2
         x: 369
-        y: 63
+        y: 64
         width: 14
-        height: 22
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -717,14 +717,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 895e1672c019a1c4ea89e352553900d6
-      internalID: 828812631
+      spriteID: 7fee345baaaf41042a398d5058f6cdf5
+      internalID: -594561594
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thicc n juicy free_28
+      name: Player_28
       rect:
         serializedVersion: 2
         x: 16
@@ -738,14 +738,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17285f99536ccb3439edfeb63864fc1a
-      internalID: 1556718780
+      spriteID: 4e8996016c8ffb748a6579fea654d17c
+      internalID: 622526192
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thicc n juicy free_29
+      name: Player_29
       rect:
         serializedVersion: 2
         x: 49
@@ -759,14 +759,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6130e70bee1c0d94fba2813d3bc728b4
-      internalID: 1706764144
+      spriteID: c8587f9979262db41a70e962444d5227
+      internalID: -791553262
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: thicc n juicy free_30
+      name: Player_30
       rect:
         serializedVersion: 2
         x: 80
@@ -780,8 +780,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b903087c64640614086dad6c1a2df819
-      internalID: -1533896800
+      spriteID: 44953a8180fdf6a4da918e1bb81a1008
+      internalID: -447245978
       vertices: []
       indices: 
       edges: []
@@ -797,37 +797,37 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      thicc n juicy free_0: -1897914508
-      thicc n juicy free_1: -547438568
-      thicc n juicy free_10: 180482072
-      thicc n juicy free_11: -661784549
-      thicc n juicy free_12: -2093251526
-      thicc n juicy free_13: 2026788576
-      thicc n juicy free_14: 637565798
-      thicc n juicy free_15: 1689880778
-      thicc n juicy free_16: 658751527
-      thicc n juicy free_17: -548361012
-      thicc n juicy free_18: 1377139455
-      thicc n juicy free_19: 2078238748
-      thicc n juicy free_2: 1194140323
-      thicc n juicy free_20: 542844928
-      thicc n juicy free_21: 2116993723
-      thicc n juicy free_22: -1748918598
-      thicc n juicy free_23: 2062969990
-      thicc n juicy free_24: 1088066990
-      thicc n juicy free_25: 418340372
-      thicc n juicy free_26: -740624873
-      thicc n juicy free_27: 828812631
-      thicc n juicy free_28: 1556718780
-      thicc n juicy free_29: 1706764144
-      thicc n juicy free_3: -1535784922
-      thicc n juicy free_30: -1533896800
-      thicc n juicy free_4: 2096026428
-      thicc n juicy free_5: -1235507595
-      thicc n juicy free_6: -226548333
-      thicc n juicy free_7: -2050234482
-      thicc n juicy free_8: 398993056
-      thicc n juicy free_9: 85552120
+      Player_0: -1459007657
+      Player_1: 1321672308
+      Player_10: -1555410788
+      Player_11: -249345902
+      Player_12: 188064794
+      Player_13: -1409959315
+      Player_14: 1343601515
+      Player_15: 1666446676
+      Player_16: -818290398
+      Player_17: -742267282
+      Player_18: 1602168951
+      Player_19: 567681572
+      Player_2: 1300223466
+      Player_20: 1020317842
+      Player_21: 1650333460
+      Player_22: 941447634
+      Player_23: -62103840
+      Player_24: -1717360962
+      Player_25: -1938417889
+      Player_26: 931721797
+      Player_27: -594561594
+      Player_28: 622526192
+      Player_29: -791553262
+      Player_3: 218940608
+      Player_30: -447245978
+      Player_4: 1536125274
+      Player_5: -861899519
+      Player_6: -624660396
+      Player_7: -72775519
+      Player_8: 1903395474
+      Player_9: -1089419289
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
