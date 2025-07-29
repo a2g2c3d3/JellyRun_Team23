@@ -2,14 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoosterItem : MonoBehaviour
+namespace Item
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    public class BoosterItem : MonoBehaviour
     {
-        if (collision.CompareTag("Player"))
+        //public Player player; 캐릭터 컴퍼넌트 받아오기
+        int Speed;  //TODO 나중에 컴퍼넌트 받아오면 컴퍼넌트로 변경 할 예정
+
+        private void OnTriggerEnter2D(Collider2D collision)
         {
-            //player.speed += 0.5f; 플레이어 혹은 맵에 스피드 올려주기 혹은 따로 메서드를 만들어서 코루틴으로 다시 줄여도 될 것 같음
-            //속도 증가 로직
+            Debug.Log("닿음");
+            if (collision.CompareTag("Player"))
+            {
+                Debug.Log($"처음속도 {Speed}");
+                StartCoroutine(ChangeSpeed(10));
+                Debug.Log($"코루틴 후 속도 {Speed}");
+            }
+        }
+
+        public virtual IEnumerator ChangeSpeed(int speed)       //StartCoroutine(ChangeSpeed(원하는숫자)); 이런식으로 코루틴 사용해야 함
+        {
+            Speed += speed;
+            yield return new WaitForSeconds(3f);
+            Speed -= speed;
         }
     }
 }
