@@ -67,21 +67,18 @@ namespace Player
         // 슬라이딩 구현
         public void Slide()
         {
-            if (Input.GetKey(KeyCode.LeftShift) && !isSliding)
+            if (Input.GetKeyDown(KeyCode.LeftShift) && !isSliding)
             {
-                if (Input.GetKeyDown(KeyCode.LeftShift) && !isSliding)
-                {
-                    isSliding = true;
-                    normalCollider.enabled = false;
-                    slidingCollider.enabled = true;
-                }
+                isSliding = true;
+                normalCollider.enabled = false;
+                slidingCollider.enabled = true;
+            }
 
-                if (Input.GetKeyUp(KeyCode.LeftShift) && isSliding)
-                {
-                    isSliding = false;
-                    normalCollider.enabled = true;
-                    slidingCollider.enabled = false;
-                }
+            if (Input.GetKeyUp(KeyCode.LeftShift) && isSliding)
+            {
+                isSliding = false;
+                normalCollider.enabled = true;
+                slidingCollider.enabled = false;
             }
         }
     }
