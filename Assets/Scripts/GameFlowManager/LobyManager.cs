@@ -1,18 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class NewBehaviourScript : MonoBehaviour
+public class LobyManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Button button;
+    public Animator animator;
+    public float delayBeforeLoad = 2f;
+
+
+    private void Awake()
+    {
+        animator.SetTrigger("LobyStartTrigger");
+    }
     void Start()
     {
-
+        button.onClick.AddListener(GameStartButton);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
+
+     void GameStartButton()
+    {
+        animator.SetTrigger("LobyRunTrigger");
+        StartCoroutine(LoadMainSceneWithDelay());
+    }
+    IEnumerator LoadMainSceneWithDelay()
+    {
+        yield return new WaitForSeconds(delayBeforeLoad);
+        SceneManager.LoadScene("MainScene");
+    }
+
 }
