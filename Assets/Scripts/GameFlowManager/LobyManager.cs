@@ -8,6 +8,7 @@ public class LobyManager : MonoBehaviour
 {
     public Button button;
     public Animator animator;
+    public float delayBeforeLoad = 2f;
 
 
     private void Awake()
@@ -28,8 +29,13 @@ public class LobyManager : MonoBehaviour
 
      void GameStartButton()
     {
-        SceneManager.LoadScene("MainScene");
         animator.SetTrigger("LobyRunTrigger");
+        StartCoroutine(LoadMainSceneWithDelay());
+    }
+    IEnumerator LoadMainSceneWithDelay()
+    {
+        yield return new WaitForSeconds(delayBeforeLoad);
+        SceneManager.LoadScene("MainScene");
     }
 
 }
