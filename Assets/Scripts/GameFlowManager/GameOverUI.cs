@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using static GameSceneManager;
 
 
 public class GameOverUI : MonoBehaviour
 {
+    public Button Button;
+    public void Start()
+    {
 
-
-
-
+    }
 
     public void RestartSceneLoadButton()
     {
@@ -19,6 +21,6 @@ public class GameOverUI : MonoBehaviour
 
     public void LobySceneLoadButton()
     {
-        LoadScene(GameScene.LobbyScene);
+        LoadScene(GameScene.LobyScene);
     }
 }

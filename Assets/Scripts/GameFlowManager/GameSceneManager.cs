@@ -8,16 +8,13 @@ public class GameSceneManager : MonoBehaviour
 {
     public enum GameScene { 
         MainScene,
-        LobbyScene,
-        Shop,
-        GameOver
+        LobyScene,
+        ShopScene,
+        GameOverScene
     }
 
     public static void LoadScene(GameScene scene)
     {
         SceneManager.LoadScene(scene.ToString());
     }
-
-
-
 }
