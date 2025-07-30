@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static GameSceneManager;
 
 public class LobyManager : MonoBehaviour
 {
-    public Button button;
+    public Button startbutton;
+    public Button shopbutton;
+    public Button exitbutton;
     public Animator animator;
     public float delayBeforeLoad = 2f;
 
@@ -18,8 +21,9 @@ public class LobyManager : MonoBehaviour
     }
     void Start()
     {
-        button.onClick.AddListener(GameStartButton);
-        
+        startbutton.onClick.AddListener(() => OnButtonClicked("LobyRunTrigger", GameScene.MainScene));
+        shopbutton.onClick.AddListener(() => OnButtonClicked("LobyRunTrigger", GameScene.ShopScene));
+        //exitbutton.onClick.AddListener(() => OnButtonClicked("LobyRunTrigger", GameScene.ShopScene));
     }
 
     // Update is called once per frame
@@ -28,15 +32,15 @@ public class LobyManager : MonoBehaviour
         
     }
 
-     void GameStartButton()
+     void OnButtonClicked(string triggerName,GameScene targetScene)
     {
-        animator.SetTrigger("LobyRunTrigger");
-        StartCoroutine(LoadMainSceneWithDelay());
+        animator.SetTrigger(triggerName);
+        StartCoroutine(LoadMainSceneWithDelay(targetScene));
     }
-    IEnumerator LoadMainSceneWithDelay()
+    IEnumerator LoadMainSceneWithDelay(GameScene scene)
     {
         yield return new WaitForSeconds(delayBeforeLoad);
-        LoadScene(GameScene.MainScene);
+        LoadScene(scene);
     }
 
 }

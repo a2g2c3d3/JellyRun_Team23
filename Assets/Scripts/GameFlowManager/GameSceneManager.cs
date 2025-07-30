@@ -18,3 +18,8 @@ public class GameSceneManager : MonoBehaviour
         SceneManager.LoadScene(scene.ToString());
     }
 }
+
+  
+
+
+
