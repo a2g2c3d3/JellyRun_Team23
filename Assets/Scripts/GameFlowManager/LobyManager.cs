@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static GameSceneManager;
 
 public class LobyManager : MonoBehaviour
 {
@@ -35,7 +36,7 @@ public class LobyManager : MonoBehaviour
     IEnumerator LoadMainSceneWithDelay()
     {
         yield return new WaitForSeconds(delayBeforeLoad);
-        SceneManager.LoadScene("MainScene");
+        LoadScene(GameScene.MainScene);
     }
 
 }
