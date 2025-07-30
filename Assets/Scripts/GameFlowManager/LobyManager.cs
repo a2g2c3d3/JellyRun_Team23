@@ -7,12 +7,17 @@ using UnityEngine.UI;
 public class LobyManager : MonoBehaviour
 {
     public Button button;
+    public Animator animator;
 
 
-    // Start is called before the first frame update
+    private void Awake()
+    {
+        animator.SetTrigger("LobyStartTrigger");
+    }
     void Start()
     {
         button.onClick.AddListener(GameStartButton);
+        
     }
 
     // Update is called once per frame
@@ -24,6 +29,7 @@ public class LobyManager : MonoBehaviour
      void GameStartButton()
     {
         SceneManager.LoadScene("MainScene");
+        animator.SetTrigger("LobyRunTrigger");
     }
 
 }
