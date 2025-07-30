@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1001723444519253583}
   - component: {fileID: 3930310722073174390}
-  - component: {fileID: 2623140703395200583}
+  - component: {fileID: 3061127012381164338}
   m_Layer: 0
   m_Name: Summer1
   m_TagString: Background
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &2623140703395200583
+--- !u!61 &3061127012381164338
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,10 +114,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -5.5}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -128,7 +128,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 23.039999, y: 0.5}
+  m_Size: {x: 23.039999, y: 12.959999}
   m_EdgeRadius: 0
 --- !u!1 &1583144018413509542
 GameObject:
@@ -140,7 +140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2419439773149534706}
   - component: {fileID: 8935538720284676690}
-  - component: {fileID: 179205985706714435}
+  - component: {fileID: 817951512275202671}
   m_Layer: 0
   m_Name: Summer2
   m_TagString: Background
@@ -215,7 +215,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &179205985706714435
+--- !u!61 &817951512275202671
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -244,10 +244,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -5.5}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -258,7 +258,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 23.039999, y: 0.5}
+  m_Size: {x: 23.039999, y: 12.959999}
   m_EdgeRadius: 0
 --- !u!1 &2225520611902120211
 GameObject:
@@ -270,7 +270,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9152062704853903034}
   - component: {fileID: 6852811842835010073}
-  - component: {fileID: 7057613338796816527}
+  - component: {fileID: 7229705774189563955}
   m_Layer: 0
   m_Name: Summer3
   m_TagString: Background
@@ -345,7 +345,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &7057613338796816527
+--- !u!61 &7229705774189563955
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -374,10 +374,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -5.5}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -388,7 +388,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 23.039999, y: 0.5}
+  m_Size: {x: 23.039999, y: 12.959999}
   m_EdgeRadius: 0
 --- !u!1 &5448647227658729463
 GameObject:
@@ -435,7 +435,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5908772742316685379}
   - component: {fileID: 6765582341040594509}
-  - component: {fileID: 3658703282380930662}
+  - component: {fileID: 1270434549021482604}
   m_Layer: 0
   m_Name: Summer4
   m_TagString: Background
@@ -510,7 +510,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &3658703282380930662
+--- !u!61 &1270434549021482604
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -539,10 +539,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -5.5}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -553,5 +553,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 23.039999, y: 0.5}
+  m_Size: {x: 23.039999, y: 12.959999}
   m_EdgeRadius: 0
