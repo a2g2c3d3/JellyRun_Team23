@@ -10,6 +10,8 @@ namespace Player
     {
         private Rigidbody2D rb;
         public Transform groundCheck;
+        public CapsuleCollider2D normalCollider;
+        public CapsuleCollider2D slidingCollider;
 
         public float speed = 5f;
         public float jumpForce = 7f;
@@ -17,25 +19,21 @@ namespace Player
         private int currentJumpCount;
 
         private bool isJumping = false;
+        private bool isSliding = false;
 
         void Start()
         {
             rb = GetComponent<Rigidbody2D>();
             currentJumpCount = jumpCount;
+
+            normalCollider.enabled = true;
+            slidingCollider.enabled = false;
         }
 
         void Update()
         {
-            // 점프 구현
-            if(Input.GetKeyDown(KeyCode.Space) && currentJumpCount > 0)
-            {
-                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-                rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-
-                isJumping = true;
-                currentJumpCount--;
-                
-            }
+            Jump();
+            Slide();
         }
 
         private void FixedUpdate()
@@ -50,6 +48,40 @@ namespace Player
             if (collision.gameObject.CompareTag("Ground"))
             {
                 currentJumpCount = jumpCount;
+            }
+        }
+
+        // 점프 구현
+        public void Jump()
+        {
+            if (Input.GetKeyDown(KeyCode.Space) && currentJumpCount > 0)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+
+                isJumping = true;
+                currentJumpCount--;
+            }
+        }
+
+        // 슬라이딩 구현
+        public void Slide()
+        {
+            if (Input.GetKey(KeyCode.LeftShift) && !isSliding)
+            {
+                if (Input.GetKeyDown(KeyCode.LeftShift) && !isSliding)
+                {
+                    isSliding = true;
+                    normalCollider.enabled = false;
+                    slidingCollider.enabled = true;
+                }
+
+                if (Input.GetKeyUp(KeyCode.LeftShift) && isSliding)
+                {
+                    isSliding = false;
+                    normalCollider.enabled = true;
+                    slidingCollider.enabled = false;
+                }
             }
         }
     }
