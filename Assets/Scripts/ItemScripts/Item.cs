@@ -19,7 +19,7 @@ namespace Item
         public SpriteRenderer SpriteRenderer;
         public ScoreTestScript testScore;
         
-        public EffectType type;                     //타입 가져오기
+        public EffectType type;                     //인스펙터창 에서 타입 설정하기
         public int Effect;                          
 
         /**충돌시 값을 변경할 함수 실행*/
@@ -50,13 +50,13 @@ namespace Item
         /**체력 변경 로직*/
         protected void ChangeHP(int hp)
         {
-
+            //TODO : 나중에 UI랑 연결 해줘야함 로직은 스코어랑 동일
         }
 
         /**점수 변경 로직*/
         protected void AddScore()
         {
-            testScore.score += Effect;
+            testScore.score += Effect;      //TODO : 나중에 UI랑 연결해줘야함
             Debug.Log($"현재 점수 {testScore.score}");
             this.gameObject.SetActive(false);
         }
