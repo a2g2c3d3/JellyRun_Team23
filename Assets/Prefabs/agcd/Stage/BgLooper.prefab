@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6672632291069174912}
   - component: {fileID: 1865390329520265126}
   - component: {fileID: 402608769234378780}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BgLooper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
