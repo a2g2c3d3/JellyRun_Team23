@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3161848415744592171}
   - component: {fileID: 453246878721431822}
   - component: {fileID: 7397693356217156844}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cloud1
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2539031867566300046}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -66.1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -141,9 +141,9 @@ GameObject:
   - component: {fileID: 423533220976487971}
   - component: {fileID: 2366081456369209190}
   - component: {fileID: 8451669050290952362}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cloud2
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -157,7 +157,7 @@ Transform:
   m_GameObject: {fileID: 2584546616701857269}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.333334, y: -66.1, z: 0}
+  m_LocalPosition: {x: 21.333334, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -306,9 +306,9 @@ GameObject:
   - component: {fileID: 787484510283056115}
   - component: {fileID: 6559535699047814488}
   - component: {fileID: 8646612945655952116}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cloud4
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -322,7 +322,7 @@ Transform:
   m_GameObject: {fileID: 5196824529236948856}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 64, y: -66.1, z: 0}
+  m_LocalPosition: {x: 64, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -436,9 +436,9 @@ GameObject:
   - component: {fileID: 420192908586619226}
   - component: {fileID: 5574262446961495868}
   - component: {fileID: 4960241449279081731}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cloud3
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -452,7 +452,7 @@ Transform:
   m_GameObject: {fileID: 7849662821012238711}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 42.666664, y: -66.1, z: 0}
+  m_LocalPosition: {x: 42.666664, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

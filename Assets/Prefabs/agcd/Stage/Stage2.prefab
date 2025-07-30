@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1001723444519253583}
   - component: {fileID: 3930310722073174390}
-  - component: {fileID: 6401483496687522241}
+  - component: {fileID: 2623140703395200583}
   m_Layer: 0
   m_Name: Summer1
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1301458299281167508}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -20, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6401483496687522241
+--- !u!61 &2623140703395200583
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,7 +128,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 23.039999, y: 0.1}
+  m_Size: {x: 23.039999, y: 0.5}
   m_EdgeRadius: 0
 --- !u!1 &1583144018413509542
 GameObject:
@@ -140,10 +140,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2419439773149534706}
   - component: {fileID: 8935538720284676690}
-  - component: {fileID: 2915991454370413853}
+  - component: {fileID: 179205985706714435}
   m_Layer: 0
   m_Name: Summer2
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -157,7 +157,7 @@ Transform:
   m_GameObject: {fileID: 1583144018413509542}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.04, y: -20, z: 0}
+  m_LocalPosition: {x: 23.04, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -215,7 +215,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &2915991454370413853
+--- !u!61 &179205985706714435
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -258,7 +258,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 23.039999, y: 0.1}
+  m_Size: {x: 23.039999, y: 0.5}
   m_EdgeRadius: 0
 --- !u!1 &2225520611902120211
 GameObject:
@@ -270,10 +270,10 @@ GameObject:
   m_Component:
   - component: {fileID: 9152062704853903034}
   - component: {fileID: 6852811842835010073}
-  - component: {fileID: 6409542314717978048}
+  - component: {fileID: 7057613338796816527}
   m_Layer: 0
   m_Name: Summer3
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -287,7 +287,7 @@ Transform:
   m_GameObject: {fileID: 2225520611902120211}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 46.08, y: -20, z: 0}
+  m_LocalPosition: {x: 46.08, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -345,7 +345,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6409542314717978048
+--- !u!61 &7057613338796816527
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -388,7 +388,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 23.039999, y: 0.1}
+  m_Size: {x: 23.039999, y: 0.5}
   m_EdgeRadius: 0
 --- !u!1 &5448647227658729463
 GameObject:
@@ -435,10 +435,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5908772742316685379}
   - component: {fileID: 6765582341040594509}
-  - component: {fileID: 4327149600245249899}
+  - component: {fileID: 3658703282380930662}
   m_Layer: 0
   m_Name: Summer4
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -452,7 +452,7 @@ Transform:
   m_GameObject: {fileID: 6839255840100518050}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 69.12, y: -20, z: 0}
+  m_LocalPosition: {x: 69.12, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -510,7 +510,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &4327149600245249899
+--- !u!61 &3658703282380930662
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -553,5 +553,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 23.039999, y: 0.1}
+  m_Size: {x: 23.039999, y: 0.5}
   m_EdgeRadius: 0

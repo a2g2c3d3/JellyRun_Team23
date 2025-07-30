@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6413586936697047816}
   - component: {fileID: 4987608163139773896}
-  - component: {fileID: 4559314007535808808}
-  m_Layer: 0
+  - component: {fileID: 6851256665016545237}
+  m_Layer: 3
   m_Name: mountain1
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1948054601347589738}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.4, y: -67.8, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &4559314007535808808
+--- !u!61 &6851256665016545237
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,7 +128,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 23.039999, y: 0.1}
+  m_Size: {x: 23.039999, y: 0.5}
   m_EdgeRadius: 0
 --- !u!1 &2530739742497093773
 GameObject:
@@ -175,10 +175,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6434116256187642405}
   - component: {fileID: 7503658756126203778}
-  - component: {fileID: 5736286509118958688}
-  m_Layer: 0
+  - component: {fileID: 1136775349489807130}
+  m_Layer: 3
   m_Name: mountain4
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -192,7 +192,7 @@ Transform:
   m_GameObject: {fileID: 2774610983043270130}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 66.4, y: -67.8, z: 0}
+  m_LocalPosition: {x: 69.119995, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -250,7 +250,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5736286509118958688
+--- !u!61 &1136775349489807130
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -293,7 +293,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 23.039999, y: 0.1}
+  m_Size: {x: 23.039999, y: 0.5}
   m_EdgeRadius: 0
 --- !u!1 &4505834747307613575
 GameObject:
@@ -305,10 +305,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1186317599369983217}
   - component: {fileID: 4376833439389146407}
-  - component: {fileID: 7465272731400508495}
-  m_Layer: 0
+  - component: {fileID: 4313306256644788611}
+  m_Layer: 3
   m_Name: mountain2
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -322,7 +322,7 @@ Transform:
   m_GameObject: {fileID: 4505834747307613575}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.733334, y: -67.8, z: 0}
+  m_LocalPosition: {x: 23.039999, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -380,7 +380,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &7465272731400508495
+--- !u!61 &4313306256644788611
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -423,7 +423,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 23.039999, y: 0.1}
+  m_Size: {x: 23.039999, y: 0.5}
   m_EdgeRadius: 0
 --- !u!1 &9126590799337803938
 GameObject:
@@ -435,10 +435,10 @@ GameObject:
   m_Component:
   - component: {fileID: 9014602120976209983}
   - component: {fileID: 2530184838608237749}
-  - component: {fileID: 766511817788041506}
-  m_Layer: 0
+  - component: {fileID: 8740006849986727191}
+  m_Layer: 3
   m_Name: mountain3
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -452,7 +452,7 @@ Transform:
   m_GameObject: {fileID: 9126590799337803938}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 45.066666, y: -67.8, z: 0}
+  m_LocalPosition: {x: 46.079998, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -510,7 +510,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &766511817788041506
+--- !u!61 &8740006849986727191
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -553,5 +553,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 23.039999, y: 0.1}
+  m_Size: {x: 23.039999, y: 0.5}
   m_EdgeRadius: 0

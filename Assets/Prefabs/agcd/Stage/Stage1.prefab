@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 493380795405490222}
   - component: {fileID: 3787013654075775611}
   - component: {fileID: 6529373951711685078}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground2
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,9 +141,9 @@ GameObject:
   - component: {fileID: 6600595078962625788}
   - component: {fileID: 8533931573041230405}
   - component: {fileID: 522238957768975447}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground3
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -271,7 +271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6014701795615369036}
   - component: {fileID: 3145106600196785281}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cloud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -355,7 +355,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4141905618330028115}
   - component: {fileID: 4101654446523181702}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cloud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -440,9 +440,9 @@ GameObject:
   - component: {fileID: 8094130067647322815}
   - component: {fileID: 1094623562510434605}
   - component: {fileID: 5706955639378849297}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground4
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -570,9 +570,9 @@ GameObject:
   - component: {fileID: 6421072575600297794}
   - component: {fileID: 6237312905603385354}
   - component: {fileID: 4867295824815789671}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -699,7 +699,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7932523207050855278}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stage1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
