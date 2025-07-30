@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6413586936697047816}
   - component: {fileID: 4987608163139773896}
-  - component: {fileID: 6851256665016545237}
+  - component: {fileID: 4329004759995239843}
   m_Layer: 3
   m_Name: mountain1
   m_TagString: Background
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6851256665016545237
+--- !u!61 &4329004759995239843
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,10 +114,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -5.5}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -128,7 +128,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 23.039999, y: 0.5}
+  m_Size: {x: 23.039999, y: 12.959999}
   m_EdgeRadius: 0
 --- !u!1 &2530739742497093773
 GameObject:
@@ -175,7 +175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6434116256187642405}
   - component: {fileID: 7503658756126203778}
-  - component: {fileID: 1136775349489807130}
+  - component: {fileID: 725843434098473875}
   m_Layer: 3
   m_Name: mountain4
   m_TagString: Background
@@ -250,7 +250,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1136775349489807130
+--- !u!61 &725843434098473875
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -279,10 +279,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -5.5}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -293,7 +293,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 23.039999, y: 0.5}
+  m_Size: {x: 23.039999, y: 12.959999}
   m_EdgeRadius: 0
 --- !u!1 &4505834747307613575
 GameObject:
@@ -305,7 +305,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1186317599369983217}
   - component: {fileID: 4376833439389146407}
-  - component: {fileID: 4313306256644788611}
+  - component: {fileID: 2400891951064209946}
   m_Layer: 3
   m_Name: mountain2
   m_TagString: Background
@@ -380,7 +380,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &4313306256644788611
+--- !u!61 &2400891951064209946
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -409,10 +409,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -5.5}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -423,7 +423,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 23.039999, y: 0.5}
+  m_Size: {x: 23.039999, y: 12.959999}
   m_EdgeRadius: 0
 --- !u!1 &9126590799337803938
 GameObject:
@@ -435,7 +435,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9014602120976209983}
   - component: {fileID: 2530184838608237749}
-  - component: {fileID: 8740006849986727191}
+  - component: {fileID: 7981470905150417198}
   m_Layer: 3
   m_Name: mountain3
   m_TagString: Background
@@ -510,7 +510,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8740006849986727191
+--- !u!61 &7981470905150417198
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -539,10 +539,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -5.5}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -553,5 +553,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 23.039999, y: 0.5}
+  m_Size: {x: 23.039999, y: 12.959999}
   m_EdgeRadius: 0

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3161848415744592171}
   - component: {fileID: 453246878721431822}
-  - component: {fileID: 7397693356217156844}
+  - component: {fileID: 3194615229237631673}
   m_Layer: 3
   m_Name: Cloud1
   m_TagString: Background
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &7397693356217156844
+--- !u!61 &3194615229237631673
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,10 +114,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -5.5}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -128,7 +128,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 21.333334, y: 0.1}
+  m_Size: {x: 21.333334, y: 12}
   m_EdgeRadius: 0
 --- !u!1 &2584546616701857269
 GameObject:
@@ -140,7 +140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 423533220976487971}
   - component: {fileID: 2366081456369209190}
-  - component: {fileID: 8451669050290952362}
+  - component: {fileID: 6509876802560418886}
   m_Layer: 3
   m_Name: Cloud2
   m_TagString: Background
@@ -215,7 +215,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8451669050290952362
+--- !u!61 &6509876802560418886
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -244,10 +244,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -5.5}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -258,7 +258,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 21.333334, y: 0.1}
+  m_Size: {x: 21.333334, y: 12}
   m_EdgeRadius: 0
 --- !u!1 &2848427256744366158
 GameObject:
@@ -305,7 +305,7 @@ GameObject:
   m_Component:
   - component: {fileID: 787484510283056115}
   - component: {fileID: 6559535699047814488}
-  - component: {fileID: 8646612945655952116}
+  - component: {fileID: 9219599033321704085}
   m_Layer: 3
   m_Name: Cloud4
   m_TagString: Background
@@ -380,7 +380,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8646612945655952116
+--- !u!61 &9219599033321704085
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -409,10 +409,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -5.5}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -423,7 +423,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 21.333334, y: 0.1}
+  m_Size: {x: 21.333334, y: 12}
   m_EdgeRadius: 0
 --- !u!1 &7849662821012238711
 GameObject:
@@ -435,7 +435,7 @@ GameObject:
   m_Component:
   - component: {fileID: 420192908586619226}
   - component: {fileID: 5574262446961495868}
-  - component: {fileID: 4960241449279081731}
+  - component: {fileID: 906297673212036375}
   m_Layer: 3
   m_Name: Cloud3
   m_TagString: Background
@@ -510,7 +510,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &4960241449279081731
+--- !u!61 &906297673212036375
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -539,10 +539,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -5.5}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -553,5 +553,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 21.333334, y: 0.1}
+  m_Size: {x: 21.333334, y: 12}
   m_EdgeRadius: 0
