@@ -11,6 +11,7 @@ namespace Item
             if (collision.CompareTag("Player"))
             {
                 AddScore(1);
+                Destroy(gameObject);
             }
         }
 

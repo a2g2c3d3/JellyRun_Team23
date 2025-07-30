@@ -11,7 +11,7 @@ namespace Item
             if (collision.CompareTag("Player"))
             {
                 ChangeHP(10);
-
+                Destroy(gameObject);
             }
         }
 
