@@ -8,9 +8,10 @@ using static GameSceneManager;
 
 public class SceneChanger : MonoBehaviour
 {
-    public Button MainGamebutton;
-    public Button shopbutton;
-    public Button exitbutton;
+    public Button mainGameButton;
+    public Button shopButton;
+    public Button lobyButton;
+    public Button exitButton;
     public Animator animator;
     public float delayBeforeLoad = 2f;
 
@@ -21,8 +22,9 @@ public class SceneChanger : MonoBehaviour
     }
     void Start()
     {
-        MainGamebutton.onClick.AddListener(() => OnButtonClicked("LobyRunTrigger", GameScene.MainScene));
-        shopbutton.onClick.AddListener(() => OnButtonClicked("LobyRunTrigger", GameScene.ShopScene));
+        mainGameButton.onClick.AddListener(() => OnButtonClicked("LobyRunTrigger", GameScene.MainScene));
+        shopButton.onClick.AddListener(() => OnButtonClicked("LobyRunTrigger", GameScene.ShopScene));
+        lobyButton.onClick.AddListener(() => OnButtonClicked("LobyRunTrigger", GameScene.LobyScene));
         //exitbutton.onClick.AddListener(() => OnButtonClicked("LobyRunTrigger", GameScene.ShopScene));
     }
 
