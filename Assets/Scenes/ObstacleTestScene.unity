@@ -245,8 +245,9 @@ MonoBehaviour:
   - {fileID: 5448647227658729463, guid: 4cd9d1ef1684d334985c574a444883cd, type: 3}
   - {fileID: 2848427256744366158, guid: f5a09e6886cded9428f74f3a3ad8b2e7, type: 3}
   - {fileID: 2530739742497093773, guid: 112cbf392918cfc4b82ce12e4981f32d, type: 3}
-  stageDuration: 30
-  patternManager: {fileID: 0}
+  stageDuration: 10
+  stageSpacing: 15
+  player: {fileID: 1370180324}
 --- !u!4 &1635578640
 Transform:
   m_ObjectHideFlags: 0
