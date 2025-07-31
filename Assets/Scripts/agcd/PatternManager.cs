@@ -4,8 +4,8 @@ public class PatternManager : MonoBehaviour
 {
     public GameObject[] patternPrefabs;
     public Transform player;
-    public float patternSpacing = 15f;
-    public float patternSpawnInterval = 5f;
+    private float patternSpacing = 15f;  //플레이어와 패턴간의 간격
+    public float patternSpawnInterval = 10f; //패턴의 주기
 
     private float timer;
 
@@ -30,13 +30,8 @@ public class PatternManager : MonoBehaviour
         Instantiate(patternPrefabs[rand], spawnPos, Quaternion.identity);
     }
 
-    public void DecreaseSpacing()
-    {
-        patternSpacing = Mathf.Max(5f, patternSpacing - 2f);
-    }
-
     public void DecreaseSpawnInterval()
     {
-        patternSpawnInterval = Mathf.Max(1f, patternSpawnInterval - 0.5f);
+        patternSpawnInterval = Mathf.Max(1f, patternSpawnInterval - 2f);
     }
 }

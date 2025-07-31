@@ -14,10 +14,11 @@ public class StageManager : MonoBehaviour
     private GameObject currentStageInstance;
 
 
+
     void Start()
     {
         timer = stageDuration;
- 
+
         SpawnStage(currentStageIndex);
     }
 
@@ -32,7 +33,7 @@ public class StageManager : MonoBehaviour
             // 이전 스테이지 제거
             if (currentStageInstance != null)
             {
-              
+
                 Destroy(currentStageInstance, 2f);
             }
 
@@ -42,6 +43,7 @@ public class StageManager : MonoBehaviour
             if (currentStageIndex < stagePrefabs.Length)
             {
                 SpawnNextStage(currentStageIndex);
+                FindObjectOfType<PatternManager>().DecreaseSpawnInterval();
             }
             else
             {
@@ -59,6 +61,6 @@ public class StageManager : MonoBehaviour
     {
         float spawnX = player.position.x + stageSpacing;
         Vector3 spawnPos = new Vector3(spawnX, 0f, 0f);
-        currentStageInstance = Instantiate(stagePrefabs[index], spawnPos , Quaternion.identity);
+        currentStageInstance = Instantiate(stagePrefabs[index], spawnPos, Quaternion.identity);
     }
 }
