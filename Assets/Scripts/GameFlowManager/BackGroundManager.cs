@@ -5,7 +5,7 @@ using UnityEngine;
 public class BackGroundManager : MonoBehaviour
 {
     public Transform cloudtransform;
-    public float cloudSpeed = 1f;
+    public float cloudSpeed = 0.2f;
     // Start is called before the first frame update
     void Start()
     {

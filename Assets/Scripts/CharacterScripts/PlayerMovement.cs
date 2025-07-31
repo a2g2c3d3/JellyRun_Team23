@@ -12,6 +12,7 @@ namespace Player
         public Transform groundCheck;
         public CapsuleCollider2D normalCollider;
         public CapsuleCollider2D slidingCollider;
+        private Animator anim;
 
         public float speed = 5f;
         public float jumpForce = 7f;
@@ -28,6 +29,8 @@ namespace Player
 
             normalCollider.enabled = true;
             slidingCollider.enabled = false;
+
+            anim = GetComponent<Animator>();
         }
 
         void Update()
@@ -48,6 +51,9 @@ namespace Player
             if (collision.gameObject.CompareTag("Ground"))
             {
                 currentJumpCount = jumpCount;
+
+                isJumping = false;
+                anim.SetBool("isJumping", false);
             }
         }
 
@@ -60,6 +66,16 @@ namespace Player
                 rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
 
                 isJumping = true;
+                
+                if (currentJumpCount == 2)
+                {
+                    anim.SetBool("isJumping", true);
+                }
+                else if (currentJumpCount == 1)
+                {
+                    anim.SetTrigger("isDoubleJumping");
+                }
+
                 currentJumpCount--;
             }
         }
@@ -72,6 +88,7 @@ namespace Player
                 isSliding = true;
                 normalCollider.enabled = false;
                 slidingCollider.enabled = true;
+                anim.SetBool("isSliding", true);
             }
 
             if (Input.GetKeyUp(KeyCode.LeftShift) && isSliding)
@@ -79,6 +96,7 @@ namespace Player
                 isSliding = false;
                 normalCollider.enabled = true;
                 slidingCollider.enabled = false;
+                anim.SetBool("isSliding", false);
             }
         }
     }

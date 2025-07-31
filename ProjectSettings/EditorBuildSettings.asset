@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LobyScene.unity
     guid: 2ad96354162cdcd49a774b86d7414e7f
+  - enabled: 1
+    path: Assets/Scenes/ShopScene.unity
+    guid: 1126376f807a5a847a801f4f7201a944
   m_configObjects: {}

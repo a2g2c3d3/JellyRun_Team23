@@ -293,9 +293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-
-  offset: {x: 5, y: 0, z: -10}
-
+  offset: {x: 0, y: 0, z: 0}
   smoothSpeed: 5
 --- !u!61 &7558251127517734812
 BoxCollider2D:
