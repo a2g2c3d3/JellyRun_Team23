@@ -37,6 +37,7 @@ namespace Item
             switch (type)
             {
                 case EffectType.hp:
+                    ChangeHP();
                     break;
                 case EffectType.speed:
                     StartCoroutine(ChangeSpeed());
@@ -48,8 +49,11 @@ namespace Item
         }
 
         /**체력 변경 로직*/
-        protected void ChangeHP(int hp)
+        protected void ChangeHP()
         {
+            testScore.hp += Effect;
+            Debug.Log($"현재 체력 {testScore.hp}");
+            this.gameObject.SetActive(false);
             //TODO : 나중에 UI랑 연결 해줘야함 로직은 스코어랑 동일
         }
 
@@ -57,6 +61,7 @@ namespace Item
         protected void AddScore()
         {
             testScore.score += Effect;      //TODO : 나중에 UI랑 연결해줘야함
+            playerMovement.speed = testScore.score % 5 == 0 ? playerMovement.speed + 1: playerMovement.speed; // 점수 5점 마다 속도 0.5 증가 로직
             Debug.Log($"현재 점수 {testScore.score}");
             this.gameObject.SetActive(false);
         }
