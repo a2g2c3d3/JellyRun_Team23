@@ -23,12 +23,8 @@ public class BgLooper : MonoBehaviour
 
         if (collision.CompareTag("Pattern"))
         {
-            Destroy(collision.gameObject);
-
-          
+            Destroy(collision.gameObject,4f);
         }
     }
-
-    
 }
 

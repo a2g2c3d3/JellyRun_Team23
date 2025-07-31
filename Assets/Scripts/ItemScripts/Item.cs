@@ -20,7 +20,13 @@ namespace Item
         public ScoreTestScript testScore;
         
         public EffectType type;                     //인스펙터창 에서 타입 설정하기
-        public int Effect;                          
+        public int Effect;
+
+        private void Awake()
+        {
+            playerMovement = FindObjectOfType<PlayerMovement>();
+            testScore = FindObjectOfType<ScoreTestScript>();
+        }
 
         /**충돌시 값을 변경할 함수 실행*/
         private void OnTriggerEnter2D(Collider2D collision)

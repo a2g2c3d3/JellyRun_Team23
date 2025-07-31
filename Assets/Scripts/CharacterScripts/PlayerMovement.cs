@@ -9,7 +9,6 @@ namespace Player
     public class PlayerMovement : MonoBehaviour
     {
         private Rigidbody2D rb;
-        public Transform groundCheck;
         public CapsuleCollider2D normalCollider;
         public CapsuleCollider2D slidingCollider;
         private Animator anim;
