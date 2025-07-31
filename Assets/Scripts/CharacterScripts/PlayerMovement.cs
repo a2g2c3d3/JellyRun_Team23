@@ -66,8 +66,17 @@ namespace Player
                 rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
 
                 isJumping = true;
+                
+                if (currentJumpCount == 2)
+                {
+                    anim.SetBool("isJumping", true);
+                }
+                else if (currentJumpCount == 1)
+                {
+                    anim.SetTrigger("isDoubleJumping");
+                }
+
                 currentJumpCount--;
-                anim.SetBool("isJumping", true);
             }
         }
 
