@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static GameSceneManager;
 
-public class LobyManager : MonoBehaviour
+public class SceneChanger : MonoBehaviour
 {
-    public Button startbutton;
+    public Button MainGamebutton;
     public Button shopbutton;
     public Button exitbutton;
     public Animator animator;
@@ -21,7 +21,7 @@ public class LobyManager : MonoBehaviour
     }
     void Start()
     {
-        startbutton.onClick.AddListener(() => OnButtonClicked("LobyRunTrigger", GameScene.MainScene));
+        MainGamebutton.onClick.AddListener(() => OnButtonClicked("LobyRunTrigger", GameScene.MainScene));
         shopbutton.onClick.AddListener(() => OnButtonClicked("LobyRunTrigger", GameScene.ShopScene));
         //exitbutton.onClick.AddListener(() => OnButtonClicked("LobyRunTrigger", GameScene.ShopScene));
     }
