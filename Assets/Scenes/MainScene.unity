@@ -714,7 +714,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalCollider: {fileID: 3971772548921202743}
   slidingCollider: {fileID: 742184721658905644}
-  speed: 5
+  speed: 25
   jumpForce: 4
   jumpCount: 2
 --- !u!1 &7558251127517734810
