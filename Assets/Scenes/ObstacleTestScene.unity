@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &558586290
+--- !u!1 &410460210
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,8 +131,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 558586292}
-  - component: {fileID: 558586291}
+  - component: {fileID: 410460212}
+  - component: {fileID: 410460211}
   m_Layer: 0
   m_Name: PatternManager
   m_TagString: Untagged
@@ -140,13 +140,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &558586291
+--- !u!114 &410460211
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 558586290}
+  m_GameObject: {fileID: 410460210}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 005d4dbf15d312244a6171d317efdf67, type: 3}
@@ -160,13 +160,13 @@ MonoBehaviour:
   player: {fileID: 1370180324}
   patternSpacing: 15
   patternSpawnInterval: 5
---- !u!4 &558586292
+--- !u!4 &410460212
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 558586290}
+  m_GameObject: {fileID: 410460210}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -580,6 +580,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 2099343813}
-  - {fileID: 558586292}
   - {fileID: 1635578640}
   - {fileID: 1685325262}
+  - {fileID: 410460212}
