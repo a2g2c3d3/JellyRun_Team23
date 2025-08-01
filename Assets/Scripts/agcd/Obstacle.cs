@@ -7,18 +7,21 @@ public class Obstacle : MonoBehaviour
 {
     public PlayerMovement player; //플레이어 속도 받아오기
     public int damage = 30; // 입힐 데미지량
+    private Health hp; //체력 가져오기
 
     private void Awake()
     {
         player = FindObjectOfType<PlayerMovement>(); //플레이어 오브젝트 가져오기
+        hp = FindObjectOfType<Health>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.CompareTag("Player")) return;
         {
+            hp.TakeDamage(20);
             if (player.speed != 25)
             player.speed = 5f; //기본속도로 돌려놓기
-            Debug.Log($"{damage}의 데미지!");
+            Debug.Log("20의 데미지!");
         }
         
 
