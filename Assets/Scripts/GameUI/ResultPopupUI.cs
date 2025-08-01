@@ -15,31 +15,42 @@ public class ResultPopupUI : MonoBehaviour
     private void Start()
     {
         if (popupPanel != null) popupPanel.SetActive(false);
-    }
-
-    private void OnEnable()
-    {
         // 게임 종료 이벤트 구독 (플레이어 사망 또는 시간 종료)
+        //  이벤트 구독을 Start()에서 하도록 변경
         StageUIManager.OnGameFinished += ShowResult;
     }
 
-    private void OnDisable()
-    {
+    private void OnDestroy()
+    {// 게임 종료 이벤트 구독 (플레이어 사망 또는 시간 종료)
+        //  해제도 OnDisable 말고 OnDestroy로
         StageUIManager.OnGameFinished -= ShowResult;
     }
+
+    //private void OnEnable()
+    //{
+    //    
+    //    StageUIManager.OnGameFinished += ShowResult;
+    //}
+
+    //private void OnDisable()
+    //{
+    //    StageUIManager.OnGameFinished -= ShowResult;
+    //}
 
     private void ShowResult()
     {
         if (isResultShown) return;
         isResultShown = true;
 
+        popupPanel.SetActive(true);
         Time.timeScale = 0f;
-        if (popupPanel != null) popupPanel.SetActive(true);
+        
 
         // 최종 점수 표시
         if (scoreText != null && ScoreManager.Instance != null)
         {
             scoreText.text = $"Score: {ScoreManager.Instance.Score}";
         }
+        Debug.Log("구독 좋아요 알림설정");
     }
 }
