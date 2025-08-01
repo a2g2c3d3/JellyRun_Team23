@@ -50,8 +50,6 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        Debug.Log($"TakeDamage called with amount: {amount}, CurrentHealth: {CurrentHealth}, MaxHealth: {maxHealth}");
-
         if (isDead) return;
 
         CurrentHealth = Mathf.Max(CurrentHealth - amount, 0f);

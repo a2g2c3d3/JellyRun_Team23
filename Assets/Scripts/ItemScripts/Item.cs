@@ -61,7 +61,6 @@ namespace Item
         /**체력 변경 로직*/
         protected void ChangeHP()
         {
-            Debug.Log("체력 증가 + 10");
             hp.PlusHP(Effect);
             testScore.hp += Effect;
             this.gameObject.SetActive(false);
@@ -77,7 +76,6 @@ namespace Item
             {
                 playerMovement.speed = testScore.score % 5 == 0 ? playerMovement.speed + 1 : playerMovement.speed; // 점수 5점 마다 속도 0.5 증가 로직
             }
-            Debug.Log($"현재 점수 {testScore.score}");
             this.gameObject.SetActive(false);
         }
 

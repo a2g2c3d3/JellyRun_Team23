@@ -13,7 +13,6 @@ public class TimerUI : MonoBehaviour
     {
         if (timer == null || timeText == null)
         {
-            Debug.LogError("TimerUI: 필요한 컴포넌트 레퍼런스가 없습니다.");
             enabled = false;
             return;
         }

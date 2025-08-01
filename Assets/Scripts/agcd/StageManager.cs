@@ -28,7 +28,6 @@ public class StageManager : MonoBehaviour
 
         if (timer <= 0f)
         {
-            Debug.Log("스테이지 변경!");
 
             // 이전 스테이지 제거
             if (currentStageInstance != null)
@@ -44,10 +43,6 @@ public class StageManager : MonoBehaviour
             {
                 SpawnNextStage(currentStageIndex);
                 FindObjectOfType<PatternManager>().DecreaseSpawnInterval();
-            }
-            else
-            {
-                Debug.Log("모든 스테이지 완료!");
             }
         }
     }

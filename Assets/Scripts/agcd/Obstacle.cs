@@ -21,7 +21,6 @@ public class Obstacle : MonoBehaviour
             hp.TakeDamage(20);
             if (player.speed != 25)
             player.speed = 5f; //기본속도로 돌려놓기
-            Debug.Log("20의 데미지!");
         }
         
 

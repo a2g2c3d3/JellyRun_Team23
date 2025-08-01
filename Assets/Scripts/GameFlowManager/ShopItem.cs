@@ -8,6 +8,5 @@ public class ShopItem : MonoBehaviour
     {
         PlayerPrefs.SetString("SelectedCharacter", characterName);
         PlayerPrefs.Save();
-        Debug.Log($"SelectedCharacter: {characterName}");
     }
 }
