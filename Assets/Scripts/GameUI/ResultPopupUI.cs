@@ -53,4 +53,5 @@ public class ResultPopupUI : MonoBehaviour
         }
         Debug.Log("구독 좋아요 알림설정");
     }
+
 }
