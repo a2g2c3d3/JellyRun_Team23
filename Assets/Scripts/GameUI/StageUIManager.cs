@@ -14,8 +14,7 @@ public class StageUIManager : MonoBehaviour
     public static StageUIManager Instance { get; private set; }
 
     [Header("스테이지 설정")]
-    [SerializeField] private float[] stageDurations = { 30f, 30f, 40f, 50f }; // 스테이지별 시간(초). Inspector에서 개수와 시간 조절 가능
-
+    [SerializeField] private float[] stageDurations = { 30f, 30f, 30f, 30f }; // 스테이지별 시간(초). Inspector에서 개수와 시간 조절 가능
     [Header("현재 상태")]
     [SerializeField] private int currentStage;
     [SerializeField] private float totalTimeRemaining;

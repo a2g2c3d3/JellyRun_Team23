@@ -2,16 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static GameSceneManager;
 
 
+/// <summary>
+/// 게임 내 버튼의 역할을 정의하는 열거형.
+/// 버튼의 기능을 명확하게 구분하고 중앙 집중화하는 데 사용됩니다.
+/// </summary>
 public enum ButtonRole
 {
-    None, // 버튼 역할이 지정되지 않은 상태
-    Restart, // 게임을 다시 시작하는 버튼
-    Lobby, // 로비로 이동하는 버튼
-    ToggleSettings // 설정 팝업을 켜고 끄는 버튼
+    None,
+    Restart,
+    Lobby,
+    ToggleSettings,
+    TemporaryStop
 }
-
 
 public class GameUIManager : MonoBehaviour
 {
@@ -47,6 +52,9 @@ public class GameUIManager : MonoBehaviour
             case ButtonRole.ToggleSettings:
                 HandleToggleSettingsPopup();
                 break;
+            case ButtonRole.TemporaryStop: 
+                HandleTemporaryStop();
+                break;
             default:
                 Debug.LogWarning($"Unknown button role: {role}");
                 break;
@@ -56,7 +64,7 @@ public class GameUIManager : MonoBehaviour
     /// <summary>
     /// 설정 팝업을 켜거나 끕니다. 팝업 활성화 시 시간을 멈춥니다.
     /// </summary>
-    private void HandleToggleSettingsPopup()
+    public void HandleToggleSettingsPopup()
     {
         if (settingsPopup == null) return;
 
@@ -69,18 +77,28 @@ public class GameUIManager : MonoBehaviour
     /// <summary>
     /// 현재 씬을 다시 로드하여 게임을 재시작합니다.
     /// </summary>
-    private void HandleRestartGame()
+    public void HandleRestartGame()
     {
         Time.timeScale = 1f; // 시간 정지 해제
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        LoadScene(GameScene.MainScene);
+    }
+
+    /// <summary>
+    /// 게임을 일시 정지(시간을 멈춤)합니다.
+    /// </summary>
+    public void HandleTemporaryStop()
+    {
+        Time.timeScale = 0f;
+        // 필요하다면 여기에 팝업 UI를 활성화하는 코드를 추가할 수 있습니다.
+        // 예: if (pausePopup != null) pausePopup.SetActive(true);
     }
 
     /// <summary>
     /// 로비 씬으로 이동합니다.
     /// </summary>
-    private void HandleGoToLobby()
+    public void HandleGoToLobby()
     {
         Time.timeScale = 1f; // 시간 정지 해제
-        SceneManager.LoadScene("LobbyScene"); // "LobbyScene"은 실제 로비 씬 이름으로 변경해야 함
+        LoadScene(GameScene.LobyScene);
     }
 }
