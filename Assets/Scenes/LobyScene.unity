@@ -1810,9 +1810,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0020e9c5125c2864dbeb083049ba615a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainGamebutton: {fileID: 0}
-  shopbutton: {fileID: 364021835}
-  exitbutton: {fileID: 540554486}
+  mainGameButton: {fileID: 456366747}
+  shopButton: {fileID: 364021835}
+  lobyButton: {fileID: 540554486}
+  exitButton: {fileID: 0}
   animator: {fileID: 1216402011}
   delayBeforeLoad: 2
 --- !u!1 &916897470
