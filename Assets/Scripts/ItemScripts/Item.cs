@@ -19,7 +19,7 @@ namespace Item
         public PlayerMovement playerMovement;       //값 변경이 필요한 스크립트 접근할 변수들
         public SpriteRenderer SpriteRenderer;
         public ScoreTestScript testScore;
-        
+        private Health hp;
         
         public EffectType type;                     //인스펙터창 에서 타입 설정하기
         public int Effect;
@@ -28,6 +28,7 @@ namespace Item
         {
             playerMovement = FindObjectOfType<PlayerMovement>();
             testScore = FindObjectOfType<ScoreTestScript>();
+            hp = FindObjectOfType<Health>();
         }
 
         /**충돌시 값을 변경할 함수 실행*/
@@ -60,8 +61,9 @@ namespace Item
         /**체력 변경 로직*/
         protected void ChangeHP()
         {
+            Debug.Log("체력 증가 + 10");
+            hp.PlusHP(Effect);
             testScore.hp += Effect;
-            Debug.Log($"현재 체력 {testScore.hp}");
             this.gameObject.SetActive(false);
             //TODO : 나중에 UI랑 연결 해줘야함 로직은 스코어랑 동일
         }
