@@ -18,12 +18,13 @@ namespace Player
         private int currentJumpCount;
         private bool isKnockback = false;
 
-        private bool isInvincible = false;
+        private bool isInvincible = false; // 무적
         [SerializeField] private float invincibleDuration = 1f;
 
         private bool isJumping = false;
         private bool isSliding = false;
         private bool isDamage = false;
+        private bool isControlLocked = false; // 넉백시 조작불가
 
         void Start()
         {
@@ -63,6 +64,7 @@ namespace Player
                 {
                     isKnockback = false;
                     anim.SetBool("isDamage", false); // 애니도 원복
+                    isControlLocked = false;
                 }
             }
         }
@@ -70,6 +72,7 @@ namespace Player
         // 점프 구현
         public void Jump()
         {
+            if (isControlLocked) return;
             if (Input.GetKeyDown(KeyCode.Space) && currentJumpCount > 0)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
@@ -93,6 +96,7 @@ namespace Player
         // 슬라이딩 구현
         public void Slide()
         {
+            if (isControlLocked) return;
             if (Input.GetKeyDown(KeyCode.LeftShift) && !isSliding)
             {
                 isSliding = true;
@@ -127,6 +131,7 @@ namespace Player
         {
             isInvincible = true;
             isKnockback = true;
+            isControlLocked = true;
 
             float knockbackForce = 10f;
             Vector2 knockbackDir = new Vector2(-1f, 1f).normalized;

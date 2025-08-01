@@ -40,6 +40,7 @@ public class Health : MonoBehaviour
         }
     }
 
+
     private void Update()
     {
         if (!isDead && transform.position.y < fallThresholdY)
@@ -104,8 +105,8 @@ public class Health : MonoBehaviour
     {
         if (CurrentHealth < maxHealth) //맥스보다 낮을때만 체력 추가
         {
-            CurrentHealth += amount;
-            
+            CurrentHealth += Mathf.Max(CurrentHealth - amount, 0f);
+
             if (CurrentHealth > maxHealth) //추가 후 맥스체력 넘었을 경우 정상화
             {
                 CurrentHealth = maxHealth;
