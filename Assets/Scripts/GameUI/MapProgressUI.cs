@@ -6,28 +6,16 @@ using UnityEngine.UI; // UI 관련 네임스페이스 추가
 
 public class MapProgressUI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public Slider progressSlider;
-
-    private void Start()
-    {
-        if (progressSlider == null)
-        {
-            Debug.LogError("MapProgressUI: 슬라이더 레퍼런스가 없습니다.");
-            enabled = false;
-            return;
-        }
-        progressSlider.value = 0;
-    }
+    [SerializeField] private Slider progressSlider;
 
     private void OnEnable()
     {
-        MapProgress.ProgressChanged += UpdateProgressSlider;
+        MapProgress.OnProgressChanged += UpdateProgressSlider;
     }
 
     private void OnDisable()
     {
-        MapProgress.ProgressChanged -= UpdateProgressSlider;
+        MapProgress.OnProgressChanged -= UpdateProgressSlider;
     }
 
     private void UpdateProgressSlider(float percentage)

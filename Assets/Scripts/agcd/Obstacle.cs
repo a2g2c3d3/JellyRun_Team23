@@ -1,17 +1,25 @@
+using Player;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
+    public PlayerMovement player; //플레이어 속도 받아오기
     public int damage = 30; // 입힐 데미지량
 
+    private void Awake()
+    {
+        player = FindObjectOfType<PlayerMovement>(); //플레이어 오브젝트 가져오기
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.CompareTag("Player")) return;
-
-        Debug.Log($"{damage}의 데미지!"); 
-
+        {
+            player.speed = 5f; //기본속도로 돌려놓기
+            Debug.Log($"{damage}의 데미지!");
+        }
+        
 
         //if (collision.CompareTag("Player"))
         //{

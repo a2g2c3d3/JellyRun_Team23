@@ -1,54 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    public float maxHealth = 100f;      // 최대 체력
-    public float timeDrainRate = 1f;    // 초당 체력 감소량
-    public float fallThresholdY = -5f;  // 낙사 기준 Y 좌표
+    [Header("체력 설정")]
+    [SerializeField] private float maxHealth = 100f;
+    [SerializeField] private float timeDrainRate = 1f;
+    [SerializeField] private float fallThresholdY = -5f;
 
-    // [HideInInspector] public float currentHealth; // 외부에서 직접 접근하지 않도록 private으로 변경
     public float CurrentHealth { get; private set; }
-
-    // 이벤트: 체력 변경 시 (현재 체력, 최대 체력)
-    public delegate void OnHealthChanged(float current, float max);
-    public static event OnHealthChanged HealthChanged;
-
-    // 이벤트: 플레이어 사망 시
-    public delegate void OnPlayerDead();
-    public static event OnPlayerDead PlayerDead;
-
     private bool isDead = false;
+
+    public static event System.Action<float, float> OnHealthChanged; // (현재체력, 최대체력)
+    public static event System.Action OnPlayerDead;
 
     private void Awake()
     {
-        CurrentHealth = maxHealth; // 체력 초기화
+        CurrentHealth = maxHealth;
     }
 
     private void Start()
     {
-        // 게임 시작 시 체력 UI 즉시 업데이트
-        HealthChanged?.Invoke(CurrentHealth, maxHealth);
+        if (OnHealthChanged != null) OnHealthChanged(CurrentHealth, maxHealth);
         StartCoroutine(TimeDrain());
     }
 
     private IEnumerator TimeDrain()
     {
-        // 플레이어가 살아있는 동안 1초마다 체력 감소
-        while (CurrentHealth > 0)
+        while (CurrentHealth > 0 && !isDead)
         {
             yield return new WaitForSeconds(1f);
-            if (!isDead) // 죽은 후에는 시간 감소 중지
-            {
-                TakeDamage(timeDrainRate);
-            }
+            TakeDamage(timeDrainRate);
         }
     }
 
     private void Update()
     {
-        // 낙사 체크
         if (!isDead && transform.position.y < fallThresholdY)
         {
             Die();
@@ -57,10 +46,10 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        if (isDead) return; // 이미 죽었다면 대미지 받지 않음
+        if (isDead) return;
 
         CurrentHealth = Mathf.Max(CurrentHealth - amount, 0f);
-        HealthChanged?.Invoke(CurrentHealth, maxHealth);
+        if (OnHealthChanged != null) OnHealthChanged(CurrentHealth, maxHealth);
 
         if (CurrentHealth <= 0f)
         {
@@ -68,15 +57,27 @@ public class Health : MonoBehaviour
         }
     }
 
+   
     private void Die()
     {
-        if (isDead) return; // 중복 실행 방지
+        // 이미 사망한 상태라면 함수를 즉시 종료합니다.
+        if (isDead) return;
         isDead = true;
 
-        PlayerDead?.Invoke();
-        // 참고: 애니메이션이나 다른 효과를 위해 오브젝트 파괴를 약간 지연시킬 수 있습니다.
-        // Destroy(gameObject, 2f);
+        // 플레이어 사망 이벤트 호출
+        if (OnPlayerDead != null)
+        {
+            OnPlayerDead();
+        }
+
+        // 플레이어 사망 시 게임 전체 흐름을 멈추기 위해 StageUIManager 코루틴 중지
+        if (StageUIManager.Instance != null)
+        {
+            StageUIManager.Instance.StopAllCoroutines();
+        }
+
+
         Destroy(gameObject);
-    }
-}
+        } }
+
 

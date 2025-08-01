@@ -7,9 +7,7 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager Instance { get; private set; }
     public int Score { get; private set; }
 
-    // 이벤트: 점수 변경 시 (현재 점수)
-    public delegate void OnScoreChanged(int newScore);
-    public static event OnScoreChanged ScoreChanged;
+    public static event System.Action<int> OnScoreChanged;
 
     private void Awake()
     {
@@ -27,12 +25,18 @@ public class ScoreManager : MonoBehaviour
     public void AddScore(int amount)
     {
         Score += amount;
-        ScoreChanged?.Invoke(Score); // 점수 변경 이벤트 호출
+        if (OnScoreChanged != null)
+        {
+            OnScoreChanged(Score);
+        }
     }
 
     public void ResetScore()
     {
         Score = 0;
-        ScoreChanged?.Invoke(Score);
+        if (OnScoreChanged != null)
+        {
+            OnScoreChanged(Score);
+        }
     }
 }

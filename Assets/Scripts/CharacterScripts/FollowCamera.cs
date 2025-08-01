@@ -7,9 +7,9 @@ public class FollowCamera : MonoBehaviour
 {
     public Transform target;
     public Vector3 offset;  // 카메라와 플레이어 사이 간격
-    public float smoothSpeed = 5f; // 부드럽게 따라오는 속도
+    public float smoothSpeed = 20f; // 부드럽게 따라오는 속도
 
-    void LateUpdate()
+    void FixedUpdate()
     {
         if (target == null) return;
 

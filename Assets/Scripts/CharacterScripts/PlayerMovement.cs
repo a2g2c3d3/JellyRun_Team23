@@ -9,9 +9,7 @@ namespace Player
     public class PlayerMovement : MonoBehaviour
     {
         private Rigidbody2D rb;
-        public Transform groundCheck;
         public CapsuleCollider2D normalCollider;
-        public CapsuleCollider2D slidingCollider;
         private Animator anim;
 
         public float speed = 5f;
@@ -28,7 +26,6 @@ namespace Player
             currentJumpCount = jumpCount;
 
             normalCollider.enabled = true;
-            slidingCollider.enabled = false;
 
             anim = GetComponent<Animator>();
         }
@@ -86,8 +83,12 @@ namespace Player
             if (Input.GetKeyDown(KeyCode.LeftShift) && !isSliding)
             {
                 isSliding = true;
-                normalCollider.enabled = false;
-                slidingCollider.enabled = true;
+                
+                normalCollider.offset = new Vector2(0f, -0f);
+                normalCollider.size = new Vector2(1f, 0.5f);
+                normalCollider.direction = CapsuleDirection2D.Horizontal;
+                
+                
                 anim.SetBool("isSliding", true);
             }
 
@@ -95,9 +96,26 @@ namespace Player
             {
                 isSliding = false;
                 normalCollider.enabled = true;
-                slidingCollider.enabled = false;
+                normalCollider.offset = new Vector2(0f, 0f);
+                normalCollider.size = new Vector2(1f, 1.428571f);
+                normalCollider.direction = CapsuleDirection2D.Vertical;
+                
                 anim.SetBool("isSliding", false);
             }
         }
+
+        //public IEnumerator IncreasingSpeed()
+        //{
+        //    float beforeSpeed = speed;
+        //    speed = 25;
+        //    //만약 사라지는 모션이 생긴다면 추가해주기 애니메이터에서 파라미터 만들어 추가 해 주면 될 것 같음
+        //    yield return new WaitForSeconds(3f);
+        //    speed = beforeSpeed; //부스터 중복 획득 불가능 하게 설정 할 경우 if문을 통해 처리 가능해보임 
+        //}
+
+        //public void IncreaseSpeed()
+        //{
+        //    StartCoroutine(IncreasingSpeed());
+        //}
     }
 }
