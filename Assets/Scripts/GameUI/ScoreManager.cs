@@ -6,6 +6,10 @@ public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance { get; private set; }
     public int Score { get; private set; }
+    public int BestScore { get; private set; }
+
+    private const string BestScoreKey = "BestScore";
+
 
     public static event System.Action<int> OnScoreChanged;
 
@@ -14,7 +18,7 @@ public class ScoreManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            LoadBestScore();
         }
         else
         {
@@ -22,21 +26,29 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        SaveBestScore();
+    }
+
+
     public void AddScore(int amount)
     {
         Score += amount;
         if (OnScoreChanged != null)
         {
-            OnScoreChanged(Score);
+            BestScore = Score;
         }
     }
 
-    public void ResetScore()
+    private void LoadBestScore()
     {
-        Score = 0;
-        if (OnScoreChanged != null)
-        {
-            OnScoreChanged(Score);
-        }
+        BestScore = PlayerPrefs.GetInt(BestScoreKey, 0);
+    }
+
+    private void SaveBestScore()
+    {
+        PlayerPrefs.SetInt(BestScoreKey, BestScore);
+        PlayerPrefs.Save(); // 변경 사항을 즉시 저장
     }
 }
