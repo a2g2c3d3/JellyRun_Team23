@@ -16,11 +16,17 @@ public class GameOverUI : MonoBehaviour
 
     public void RestartSceneLoadButton()
     {
+        ScoreManager.Instance.SaveBestScore();
+        ScoreManager.Instance.LoadBestScore();
+        Debug.Log(ScoreManager.Instance.BestScore);
         LoadScene(GameScene.MainScene);
     }
 
     public void LobySceneLoadButton()
     {
+        ScoreManager.Instance.SaveBestScore();
+        ScoreManager.Instance.LoadBestScore();
+        Debug.Log(ScoreManager.Instance.BestScore);
         LoadScene(GameScene.LobyScene);
     }
 }

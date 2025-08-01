@@ -1027,9 +1027,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5882569574338366061}
-        m_TargetAssemblyTypeName: GameUIManager, Assembly-CSharp
-        m_MethodName: HandleGoToLobby
+      - m_Target: {fileID: 7648856154905174046}
+        m_TargetAssemblyTypeName: GameOverUI, Assembly-CSharp
+        m_MethodName: LobySceneLoadButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1160,9 +1160,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5882569574338366061}
-        m_TargetAssemblyTypeName: GameUIManager, Assembly-CSharp
-        m_MethodName: HandleRestartGame
+      - m_Target: {fileID: 7648856154905174046}
+        m_TargetAssemblyTypeName: GameOverUI, Assembly-CSharp
+        m_MethodName: RestartSceneLoadButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1579,6 +1579,7 @@ GameObject:
   - component: {fileID: 2914841136905449560}
   - component: {fileID: 6407981007169930019}
   - component: {fileID: 5882569574338366061}
+  - component: {fileID: 7648856154905174046}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2900,7 +2901,7 @@ Transform:
   m_GameObject: {fileID: 8282545766605813707}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 662.75, y: 373, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3159,7 +3160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faad8c61de22ab64999e622d52e87b67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playertransform: {fileID: 0}
+  playertransform: {fileID: 2180267172630664461}
   petPrefabs: []
 --- !u!114 &6022946778701903416
 MonoBehaviour:
@@ -3740,12 +3741,25 @@ Transform:
   m_GameObject: {fileID: 715373846968108165}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 482.72372, y: 323.02713, z: -1.455163}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7648856154905174046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715373846968108165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 038d001dcd84d5d4cbc877d3549bb818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Button: {fileID: 0}
 --- !u!222 &7651250034869074166
 CanvasRenderer:
   m_ObjectHideFlags: 0
