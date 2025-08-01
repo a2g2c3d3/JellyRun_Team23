@@ -51,7 +51,6 @@ public class ResultPopupUI : MonoBehaviour
         {
             scoreText.text = $"Score: {ScoreManager.Instance.Score}";
         }
-        Debug.Log("구독 좋아요 알림설정");
     }
 
 }

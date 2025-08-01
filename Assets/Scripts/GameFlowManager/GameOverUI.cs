@@ -18,7 +18,6 @@ public class GameOverUI : MonoBehaviour
     {
         ScoreManager.Instance.SaveBestScore();
         ScoreManager.Instance.LoadBestScore();
-        Debug.Log(Time.time);
         LoadScene(GameScene.MainScene);
     }
 
@@ -27,7 +26,6 @@ public class GameOverUI : MonoBehaviour
         Time.timeScale = 1f;
         ScoreManager.Instance.SaveBestScore();
         ScoreManager.Instance.LoadBestScore();
-        Debug.Log(Time.time);
         LoadScene(GameScene.LobyScene);
     }
 }
