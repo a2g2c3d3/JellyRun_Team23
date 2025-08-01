@@ -3,6 +3,7 @@ using Player;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Item
 {
@@ -33,6 +34,7 @@ namespace Item
         {
             if (collision.CompareTag("Player"))
             {
+ 
                 GetEfeectType();
             }
         }
@@ -84,6 +86,7 @@ namespace Item
             SpriteRenderer.gameObject.SetActive(false);
             yield return new WaitForSeconds(3f);
             playerMovement.speed = beforeSpeed; //부스터 중복 획득 불가능 하게 설정 할 경우 if문을 통해 처리 가능해보임 
+            yield return null;
         }
     }
 }
