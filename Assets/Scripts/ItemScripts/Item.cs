@@ -85,8 +85,19 @@ namespace Item
             //만약 사라지는 모션이 생긴다면 추가해주기 애니메이터에서 파라미터 만들어 추가 해 주면 될 것 같음
             SpriteRenderer.gameObject.SetActive(false);
             yield return new WaitForSeconds(3f);
-            playerMovement.speed = beforeSpeed; //부스터 중복 획득 불가능 하게 설정 할 경우 if문을 통해 처리 가능해보임 
-            yield return null;
+
+
+            float duration = 1.0f; // 속도를 줄이는 데 걸릴 시간
+            float elapsed = 0f;    // 진행률
+
+            while (elapsed < duration)
+            {
+                elapsed += Time.deltaTime;
+                playerMovement.speed = Mathf.Lerp(25f, beforeSpeed, elapsed / duration);
+                yield return null;
+            }
+
+            playerMovement.speed = beforeSpeed; //혹시 모르니까 값 다시 넣어주기
         }
     }
 }
