@@ -9,7 +9,6 @@ public class ResultPopupUI : MonoBehaviour
     [Header("UI 요소")]
     [SerializeField] private GameObject popupPanel;
     [SerializeField] private TextMeshProUGUI scoreText;
-    [SerializeField] private TextMeshProUGUI timeText; // 남은 시간을 표시할 텍스트
 
     private bool isResultShown = false;
 
@@ -35,23 +34,12 @@ public class ResultPopupUI : MonoBehaviour
         isResultShown = true;
 
         Time.timeScale = 0f;
-
         if (popupPanel != null) popupPanel.SetActive(true);
 
         // 최종 점수 표시
         if (scoreText != null && ScoreManager.Instance != null)
         {
             scoreText.text = $"Score: {ScoreManager.Instance.Score}";
-        }
-
-        // 남은 시간 표시
-        if (timeText != null && StageUIManager.Instance != null)
-        {
-            // 1. totalTimeRemaining 대신 TotalTimeRemaining 프로퍼티를 사용합니다.
-            float t = StageUIManager.Instance.TotalTimeRemaining;
-            int minutes = Mathf.FloorToInt(t / 60f);
-            int seconds = Mathf.FloorToInt(t % 60f);
-            timeText.text = $"Time Left: {minutes:00}:{seconds:00}";
         }
     }
 }

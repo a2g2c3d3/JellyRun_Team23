@@ -5,25 +5,25 @@ using UnityEngine.UI; // UI 관련 네임스페이스 추가
 
 public class HPBarUI : MonoBehaviour
 {
-    [SerializeField] private Slider hpSlider;
+    [SerializeField] private Image hpImage;
 
     private void OnEnable()
     {
-        Health.OnHealthChanged += UpdateSlider;
+        Health.OnHealthChanged += UpdateHPImage;
     }
 
     private void OnDisable()
     {
-        Health.OnHealthChanged -= UpdateSlider;
+        Health.OnHealthChanged -= UpdateHPImage;
     }
 
-    private void UpdateSlider(float current, float max)
+    // 슬라이더 업데이트 대신 이미지 채우기 업데이트
+    private void UpdateHPImage(float current, float max)
     {
-        if (hpSlider != null)
+        if (hpImage != null)
         {
-            // 슬라이더의 최대값, 현재값 설정
-            hpSlider.maxValue = max;
-            hpSlider.value = current;
+            // 체력 비율을 계산하여 이미지의 fillAmount 속성을 조절합니다.
+            hpImage.fillAmount = current / max;
         }
     }
 }
