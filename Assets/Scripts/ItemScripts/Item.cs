@@ -61,9 +61,9 @@ namespace Item
         /**체력 변경 로직*/
         protected void ChangeHP()
         {
+            Debug.Log("체력 증가 + 10");
             hp.PlusHP(Effect);
             testScore.hp += Effect;
-            Debug.Log($"현재 체력 {testScore.hp}");
             this.gameObject.SetActive(false);
             //TODO : 나중에 UI랑 연결 해줘야함 로직은 스코어랑 동일
         }

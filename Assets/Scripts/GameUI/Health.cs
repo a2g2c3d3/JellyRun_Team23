@@ -104,7 +104,7 @@ public class Health : MonoBehaviour
     {
         if (CurrentHealth < maxHealth) //맥스보다 낮을때만 체력 추가
         {
-            CurrentHealth = maxHealth;
+            CurrentHealth += amount;
             
             if (CurrentHealth > maxHealth) //추가 후 맥스체력 넘었을 경우 정상화
             {
