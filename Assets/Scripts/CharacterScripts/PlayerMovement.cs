@@ -16,9 +16,14 @@ namespace Player
         public float jumpForce = 7f;
         public int jumpCount = 2;
         private int currentJumpCount;
+        private bool isKnockback = false;
+
+        private bool isInvincible = false;
+        [SerializeField] private float invincibleDuration = 1f;
 
         private bool isJumping = false;
         private bool isSliding = false;
+        private bool isDamage = false;
 
         void Start()
         {
@@ -38,8 +43,10 @@ namespace Player
 
         private void FixedUpdate()
         {
-            // 앞으로 이동
-            rb.velocity = new Vector2(speed, rb.velocity.y);
+            if (!isKnockback)
+            {
+                rb.velocity = new Vector2(speed, rb.velocity.y);
+            }
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
@@ -51,6 +58,12 @@ namespace Player
 
                 isJumping = false;
                 anim.SetBool("isJumping", false);
+
+                if (isKnockback)
+                {
+                    isKnockback = false;
+                    anim.SetBool("isDamage", false); // 애니도 원복
+                }
             }
         }
 
@@ -103,6 +116,32 @@ namespace Player
                 anim.SetBool("isSliding", false);
             }
         }
+
+        public void Damage()
+        {
+            if (isInvincible) return;
+            StartCoroutine(HandleDamage());
+        }
+
+        private IEnumerator HandleDamage()
+        {
+            isInvincible = true;
+            isKnockback = true;
+
+            float knockbackForce = 10f;
+            Vector2 knockbackDir = new Vector2(-1f, 1f).normalized;
+            rb.velocity = Vector2.zero;
+            rb.AddForce(knockbackDir * knockbackForce, ForceMode2D.Impulse);
+
+            anim.SetBool("isDamage", true);
+
+            // 무적은 유지
+            yield return new WaitForSeconds(invincibleDuration);
+            isInvincible = false;
+
+            // isKnockback은 착지 후에 풀림
+        }
+
 
         //public IEnumerator IncreasingSpeed()
         //{

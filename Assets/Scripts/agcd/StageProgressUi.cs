@@ -19,16 +19,16 @@ public class StageProgressUi : MonoBehaviour
     }
 
 
-    //public void FlashBoosterEffect()
-    //{
-    //    StopAllCoroutines();
-    //    StartCoroutine(FlashFillColor());
-    //}
+    public void FlashBoosterEffect()
+    {
+        StopAllCoroutines();
+        StartCoroutine(FlashFillColor());
+    }
 
-    //private IEnumerator FlashFillColor()
-    //{
-    //    fillImage.color = boosterColor;
-    //    yield return new WaitForSeconds(0.5f);
-    //    fillImage.color = normalColor;
-    //}
+    private IEnumerator FlashFillColor()
+    {
+        fillImage.color = boosterColor;
+        yield return new WaitForSeconds(0.5f);
+        fillImage.color = normalColor;
+    }
 }
