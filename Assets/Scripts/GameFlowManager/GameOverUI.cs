@@ -9,7 +9,6 @@ using static GameSceneManager;
 public class GameOverUI : MonoBehaviour
 {
     public Button Button;
-
     public void Start()
     {
 
@@ -18,18 +17,17 @@ public class GameOverUI : MonoBehaviour
     public void RestartSceneLoadButton()
     {
         ScoreManager.Instance.SaveBestScore();
-        Time.timeScale = 1f; // 시간 정지 해제
         ScoreManager.Instance.LoadBestScore();
+        Debug.Log(Time.time);
         LoadScene(GameScene.MainScene);
-        Debug.Log(ScoreManager.Instance.BestScore);
     }
 
     public void LobySceneLoadButton()
     {
+        Time.timeScale = 1f;
         ScoreManager.Instance.SaveBestScore();
-        Time.timeScale = 1f; // 시간 정지 해제
         ScoreManager.Instance.LoadBestScore();
+        Debug.Log(Time.time);
         LoadScene(GameScene.LobyScene);
-        Debug.Log(ScoreManager.Instance.BestScore);
     }
 }
