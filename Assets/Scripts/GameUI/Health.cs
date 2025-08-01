@@ -73,7 +73,7 @@ public class Health : MonoBehaviour
         // 플레이어 사망 이벤트 호출
         OnPlayerDead?.Invoke();
 
-
+        ScoreManager.Instance.SaveBestScore();
         // 게임 종료 이벤트 호출 (결과창을 띄우는 역할)
         StageUIManager.OnGameFinished?.Invoke();
 

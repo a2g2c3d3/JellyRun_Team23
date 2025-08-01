@@ -18,9 +18,13 @@ public class GameOverUI : MonoBehaviour
 
     public void LobySceneLoadButton()
     {
+        
         Time.timeScale = 1f;
-        ScoreManager.Instance.SaveBestScore();
-        ScoreManager.Instance.LoadBestScore();
+        
+        //ScoreManager.Instance.SaveBestScore();
+        //ScoreManager.Instance.LoadBestScore();
         LoadScene(GameScene.LobyScene);
     }
+
+   
 }
