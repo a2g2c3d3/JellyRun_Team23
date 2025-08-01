@@ -84,6 +84,7 @@ namespace Item
         /**속도 변경 로직*/
         protected IEnumerator ChangeSpeed()
         {
+            StageManager.Instance.ApplyBooster();
             float beforeSpeed = playerMovement.speed;
             playerMovement.speed = 25;
             //만약 사라지는 모션이 생긴다면 추가해주기 애니메이터에서 파라미터 만들어 추가 해 주면 될 것 같음

@@ -18,10 +18,18 @@ public class Obstacle : MonoBehaviour
     {
         if (!collision.CompareTag("Player")) return;
         {
-            hp.TakeDamage(20);
+           
             if (player.speed != 25)
-            player.speed = 5f; //기본속도로 돌려놓기
-            Debug.Log("20의 데미지!");
+            {
+                player.speed = 5f; //기본속도로 돌려놓기
+                hp.TakeDamage(20);
+                player.Damage();
+                Debug.Log($"{damage}의 데미지!");
+                StageManager.Instance.KnockbackTime();
+                PatternManager.Instance.ResetSpawnTime();
+            }
+            
+
         }
         
 
