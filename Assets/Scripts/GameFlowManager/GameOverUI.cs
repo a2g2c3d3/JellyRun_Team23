@@ -8,26 +8,23 @@ using static GameSceneManager;
 
 public class GameOverUI : MonoBehaviour
 {
-    public Button Button;
-    public void Start()
-    {
-
-    }
 
     public void RestartSceneLoadButton()
     {
         ScoreManager.Instance.SaveBestScore();
         ScoreManager.Instance.LoadBestScore();
-        Debug.Log(Time.time);
         LoadScene(GameScene.MainScene);
     }
 
     public void LobySceneLoadButton()
     {
+        
         Time.timeScale = 1f;
-        ScoreManager.Instance.SaveBestScore();
-        ScoreManager.Instance.LoadBestScore();
-        Debug.Log(Time.time);
+        
+        //ScoreManager.Instance.SaveBestScore();
+        //ScoreManager.Instance.LoadBestScore();
         LoadScene(GameScene.LobyScene);
     }
+
+   
 }

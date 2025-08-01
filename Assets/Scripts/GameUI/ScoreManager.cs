@@ -7,11 +7,10 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager Instance { get; private set; }
     public int Score { get; private set; }
     public int BestScore { get; private set; }
-
     private const string BestScoreKey = "BestScore";
 
-
     public static event System.Action<int> OnScoreChanged;
+    public static event System.Action<int> OnBestScoreChanged;
 
     private void Awake()
     {
@@ -35,23 +34,42 @@ public class ScoreManager : MonoBehaviour
     public void AddScore(int amount)
     {
         Score += amount;
-        if (OnScoreChanged != null)
-        {
-            BestScore = Score;
-        }
+        //if (OnScoreChanged != null)
+        //{
+        //    BestScore = Score;
+        //}
     }
 
     public void LoadBestScore()
     {
         BestScore = PlayerPrefs.GetInt(BestScoreKey, 0);
+        OnBestScoreChanged?.Invoke(BestScore);
+        Debug.Log(PlayerPrefs.GetInt(BestScoreKey, 0));
     }
+
+   
+
+    //public void SaveBestScore()
+    //{
+    //    if (BestScore > PlayerPrefs.GetInt(BestScoreKey, 0))
+    //    {
+    //        PlayerPrefs.SetInt(BestScoreKey, BestScore);
+    //        PlayerPrefs.Save(); // 변경 사항을 즉시 저장
+    //        OnBestScoreChanged?.Invoke(BestScore);
+    //    }
+    //}
 
     public void SaveBestScore()
     {
-        if (BestScore > PlayerPrefs.GetInt(BestScoreKey, 0)) 
+        int previous = PlayerPrefs.GetInt(BestScoreKey, 0);
+
+        if (Score > previous)
         {
+            BestScore = Score;
             PlayerPrefs.SetInt(BestScoreKey, BestScore);
-            PlayerPrefs.Save(); // 변경 사항을 즉시 저장
+            PlayerPrefs.Save();
+
+            OnBestScoreChanged?.Invoke(BestScore); //  이거 꼭!
         }
     }
 }

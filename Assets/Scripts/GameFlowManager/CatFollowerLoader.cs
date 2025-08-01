@@ -5,7 +5,7 @@ using UnityEngine;
 public class CatFollowerLoader : MonoBehaviour
 {
     public Transform playertransform;
-    public List<GameObject> petPrefabs; // Æê ÇÁ¸®ÆÕ ¸®½ºÆ®
+    public List<GameObject> petPrefabs; // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®
 
     private void Start()
     {
@@ -20,7 +20,7 @@ public class CatFollowerLoader : MonoBehaviour
             {
                 GameObject cat = Instantiate(catPrefab, playertransform.position + new Vector3(1f,0,0), Quaternion.identity);
                 //cat.AddComponent<CatFollowPlayer>().target = playertransform;
-                
+
             }
             else
             {
