@@ -7,6 +7,7 @@ public class ShopItem : MonoBehaviour
     bool status = false;
     public void SelectCharacter(string characterName)
     {
+
         if (!status)
         {
             PlayerPrefs.SetString("SelectedCharacter", characterName);
@@ -20,6 +21,10 @@ public class ShopItem : MonoBehaviour
             PlayerPrefs.Save();
             Debug.Log($"SelectedCharacter: {null}");
             status = false;
+
+
+
         }
     }
 }
+

@@ -55,7 +55,6 @@ public class StageUIManager : MonoBehaviour
      public void ShowResultPanel()
     {
         // 결과창을 띄우는 기능 수행
-        Debug.Log("결과창 열림!");
     }
 
     private void Start()

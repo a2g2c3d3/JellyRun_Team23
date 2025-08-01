@@ -41,6 +41,7 @@ public class SceneChanger : MonoBehaviour
     }
     IEnumerator LoadMainSceneWithDelay(GameScene scene)
     {
+
         yield return new WaitForSeconds(delayBeforeLoad);
         LoadScene(scene);
     }
