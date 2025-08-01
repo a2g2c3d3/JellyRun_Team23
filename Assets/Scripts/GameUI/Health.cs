@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Health : MonoBehaviour
 {
     [Header("체력 설정")]
-    [SerializeField] private float maxHealth = 100f;
+    [SerializeField] private float maxHealth = 120f;
     [SerializeField] private float timeDrainRate = 1f;
     [SerializeField] private float fallThresholdY = -5f;
 
@@ -46,6 +46,8 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
+        Debug.Log($"TakeDamage called with amount: {amount}, CurrentHealth: {CurrentHealth}, MaxHealth: {maxHealth}");
+
         if (isDead) return;
 
         CurrentHealth = Mathf.Max(CurrentHealth - amount, 0f);
@@ -55,6 +57,7 @@ public class Health : MonoBehaviour
         {
             Die();
         }
+
     }
 
    
@@ -76,8 +79,7 @@ public class Health : MonoBehaviour
             StageUIManager.Instance.StopAllCoroutines();
         }
 
-
-        Destroy(gameObject);
-        } }
+    }
+}
 
 
