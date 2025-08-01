@@ -4014,8 +4014,8 @@ MonoBehaviour:
   stagePrefabs:
   - {fileID: 6887007822737738670, guid: dc71ea3b895587441aa028f9c48288f3, type: 3}
   - {fileID: 5448647227658729463, guid: 4cd9d1ef1684d334985c574a444883cd, type: 3}
-  - {fileID: 2530739742497093773, guid: f5a09e6886cded9428f74f3a3ad8b2e7, type: 3}
-  - {fileID: 2848427256744366158, guid: 112cbf392918cfc4b82ce12e4981f32d, type: 3}
+  - {fileID: 2530739742497093773, guid: 112cbf392918cfc4b82ce12e4981f32d, type: 3}
+  - {fileID: 2848427256744366158, guid: f5a09e6886cded9428f74f3a3ad8b2e7, type: 3}
   stageDuration: 30
   stageSpacing: 15
   player: {fileID: 5266235517405030733}
@@ -4536,6 +4536,7 @@ MonoBehaviour:
   maxHealth: 100
   timeDrainRate: 1
   fallThresholdY: -5
+  playerCollider: {fileID: 0}
 --- !u!1 &7558251127517734810
 GameObject:
   m_ObjectHideFlags: 0
