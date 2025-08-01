@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using System;
 
 /// <summary>
 /// 스테이지 UI 전체를 관리하는 클래스
@@ -26,9 +27,9 @@ public class StageUIManager : MonoBehaviour
     // --- 이벤트 선언 ---
     public static event System.Action<int> OnStageStart;
     public static event System.Action OnGameClear;
-    public static event System.Action OnGameFinished;
     public static event System.Action<float> OnTotalProgressUpdate;
 
+    public static Action OnGameFinished;
 
     private float totalGameTime; // 게임 전체 시간을 저장할 변수
 
@@ -51,8 +52,15 @@ public class StageUIManager : MonoBehaviour
         }
     }
 
+     public void ShowResultPanel()
+    {
+        // 결과창을 띄우는 기능 수행
+        Debug.Log("결과창 열림!");
+    }
+
     private void Start()
     {
+        OnGameFinished += ShowResultPanel;
         // 게임 시작 시 시간 초기화 및 스테이지 진행 코루틴 시작
         totalTimeRemaining = totalGameTime;
         StartCoroutine(RunGameStages());

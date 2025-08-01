@@ -15,7 +15,11 @@ public class ScoreUI : MonoBehaviour
             enabled = false;
             return;
         }
-        // 시작 시 현재 점수로 초기화
+    }
+
+    private void Update()
+    {
+        //현재 점수로 초기화
         if (ScoreManager.Instance != null)
         {
             UpdateScoreText(ScoreManager.Instance.Score);
