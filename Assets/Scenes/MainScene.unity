@@ -666,7 +666,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1257254040}
         m_TargetAssemblyTypeName: GameUIManager, Assembly-CSharp
-        m_MethodName: HandleTemporaryStop
+        m_MethodName: HandleToggleSettingsPopup
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2730,6 +2730,7 @@ MonoBehaviour:
   - {fileID: 3357687907715895554, guid: b3343fe62869c7b45bd1df0c60325d1f, type: 3}
   player: {fileID: 5266235517405030733}
   patternSpawnInterval: 10
+  timer: 0
 --- !u!4 &1247671449
 Transform:
   m_ObjectHideFlags: 0
@@ -4065,6 +4066,7 @@ MonoBehaviour:
   stageDuration: 30
   stageSpacing: 15
   player: {fileID: 5266235517405030733}
+  timer: 0
 --- !u!4 &1961800821
 Transform:
   m_ObjectHideFlags: 0
@@ -4567,6 +4569,7 @@ MonoBehaviour:
   speed: 5
   jumpForce: 4
   jumpCount: 2
+  invincibleDuration: 1
 --- !u!114 &6917189733473915941
 MonoBehaviour:
   m_ObjectHideFlags: 0
