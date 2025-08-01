@@ -20,7 +20,6 @@ public class CatFollowerLoader : MonoBehaviour
             {
                 GameObject cat = Instantiate(catPrefab, playertransform.position + new Vector3(1f,0,0), Quaternion.identity);
                 //cat.AddComponent<CatFollowPlayer>().target = playertransform;
-                Debug.Log("여기가 문제가 아니야 보석아");
             }
             else
             {

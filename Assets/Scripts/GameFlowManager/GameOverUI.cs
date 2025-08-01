@@ -8,11 +8,6 @@ using static GameSceneManager;
 
 public class GameOverUI : MonoBehaviour
 {
-    public Button Button;
-    public void Start()
-    {
-
-    }
 
     public void RestartSceneLoadButton()
     {
