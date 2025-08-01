@@ -43,4 +43,5 @@ public class ResultPopupUI : MonoBehaviour
             scoreText.text = $"Score: {ScoreManager.Instance.Score}";
         }
     }
+
 }
