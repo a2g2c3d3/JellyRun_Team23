@@ -2,12 +2,25 @@ using UnityEngine;
 
 public class PatternManager : MonoBehaviour
 {
+    public static PatternManager Instance;
     public GameObject[] patternPrefabs;
     public Transform player;
     private float patternSpacing = 15f;  //플레이어와 패턴간의 간격
     public float patternSpawnInterval = 10f; //패턴의 주기
 
-    private float timer;
+    [SerializeField] private float timer;
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject); 
+        }
+    }
 
     void Update()
     {
@@ -33,5 +46,9 @@ public class PatternManager : MonoBehaviour
     public void DecreaseSpawnInterval()
     {
         patternSpawnInterval = Mathf.Max(1f, patternSpawnInterval - 2f);
+    }
+    public void ResetSpawnTime()
+    {
+        timer = patternSpawnInterval;
     }
 }
