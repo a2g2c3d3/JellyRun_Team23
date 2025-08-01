@@ -17,7 +17,7 @@ public class CatFollowerLoader : MonoBehaviour
             if(catPrefab != null)
             {
                 GameObject cat = Instantiate(catPrefab, playertransform.position + new Vector3(1f,0,0), Quaternion.identity);
-                //cat.AddComponent<cat>().target = playertransform;
+                cat.AddComponent<CatFollowPlayer>().target = playertransform;
             }
         }
     }
