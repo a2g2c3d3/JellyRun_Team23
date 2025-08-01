@@ -30,11 +30,12 @@ public class ResultPopupUI : MonoBehaviour
 
     private void ShowResult()
     {
-        if (isResultShown) return;
+        //if (isResultShown) return;
         isResultShown = true;
 
-        Time.timeScale = 0f;
         if (popupPanel != null) popupPanel.SetActive(true);
+        Time.timeScale = 0f;
+        
 
         // 최종 점수 표시
         if (scoreText != null && ScoreManager.Instance != null)

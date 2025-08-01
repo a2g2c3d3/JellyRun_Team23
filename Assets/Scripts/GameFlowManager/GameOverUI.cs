@@ -21,6 +21,7 @@ public class GameOverUI : MonoBehaviour
         Time.timeScale = 1f; // 시간 정지 해제
         ScoreManager.Instance.LoadBestScore();
         LoadScene(GameScene.MainScene);
+        Debug.Log(ScoreManager.Instance.BestScore);
     }
 
     public void LobySceneLoadButton()
@@ -29,5 +30,6 @@ public class GameOverUI : MonoBehaviour
         Time.timeScale = 1f; // 시간 정지 해제
         ScoreManager.Instance.LoadBestScore();
         LoadScene(GameScene.LobyScene);
+        Debug.Log(ScoreManager.Instance.BestScore);
     }
 }
