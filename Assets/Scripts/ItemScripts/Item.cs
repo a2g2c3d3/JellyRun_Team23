@@ -20,6 +20,7 @@ namespace Item
         public SpriteRenderer SpriteRenderer;
         public ScoreTestScript testScore;
         
+        
         public EffectType type;                     //인스펙터창 에서 타입 설정하기
         public int Effect;
 
@@ -68,6 +69,7 @@ namespace Item
         /**점수 변경 로직*/
         protected void AddScore()
         {
+            ScoreManager.Instance.AddScore(Effect);
             testScore.score += Effect;      //TODO : 나중에 UI랑 연결해줘야함
             if (playerMovement.speed < 15)
             {
