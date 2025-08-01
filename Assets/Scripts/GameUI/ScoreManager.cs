@@ -41,14 +41,18 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    private void LoadBestScore()
+    public void LoadBestScore()
     {
         BestScore = PlayerPrefs.GetInt(BestScoreKey, 0);
     }
 
-    private void SaveBestScore()
+    public void SaveBestScore()
     {
-        PlayerPrefs.SetInt(BestScoreKey, BestScore);
-        PlayerPrefs.Save(); // 변경 사항을 즉시 저장
+        if (BestScore > PlayerPrefs.GetInt(BestScoreKey, 0))
+        {
+            PlayerPrefs.SetInt(BestScoreKey, BestScore);
+            PlayerPrefs.Save(); // 변경 사항을 즉시 저장
+        }
+
     }
 }
