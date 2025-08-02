@@ -11,10 +11,11 @@ public class StageClearUi : MonoBehaviour
     public PlayerMovement _player;
     public TextMeshProUGUI[] textMeshProUGUI;
     [SerializeField] private GameObject[] popupPanel;
-    private int stageNum = 0;
+    private int stageNum;
 
     void Start()
     {
+        stageNum = 0;
         OffShowStage();
     }
 
