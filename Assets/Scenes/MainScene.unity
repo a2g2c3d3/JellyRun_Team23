@@ -2039,7 +2039,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 3339025797192383837}
-  bestScoreText: {fileID: 0}
+  bestScoreText: {fileID: 8641279278650328965}
 --- !u!1 &2450150621229620101
 GameObject:
   m_ObjectHideFlags: 0
