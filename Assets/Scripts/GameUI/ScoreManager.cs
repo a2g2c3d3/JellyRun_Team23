@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    public static ScoreManager Instance { get; private set; }
+    public static ScoreManager Instance { get; set; }
     public int Score { get; private set; }
-    public int BestScore { get; private set; }
-    private const string BestScoreKey = "BestScore";
+    public int BestScore { get; set; }
+    public string BestScoreKey = "BestScore";
 
     public static event System.Action<int> OnScoreChanged;
     public static event System.Action<int> OnBestScoreChanged;

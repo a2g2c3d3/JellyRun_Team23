@@ -7,6 +7,7 @@ TagManager:
   - Background
   - Ground
   - Pattern
+  - Pet
   layers:
   - Default
   - TransparentFX

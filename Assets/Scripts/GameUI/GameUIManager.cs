@@ -15,7 +15,8 @@ public enum ButtonRole
     Restart,
     Lobby,
     ToggleSettings,
-    TemporaryStop
+    TemporaryStop,
+    Reset
 }
 
 public class GameUIManager : MonoBehaviour
@@ -54,6 +55,9 @@ public class GameUIManager : MonoBehaviour
                 break;
             case ButtonRole.TemporaryStop: 
                 HandleTemporaryStop();
+                break;
+            case ButtonRole.Reset:
+                ResetBestScore();
                 break;
             default:
                 Debug.LogWarning($"Unknown button role: {role}");
@@ -107,5 +111,13 @@ public class GameUIManager : MonoBehaviour
     {
         Time.timeScale = 1f; // 시간 정지 해제
         LoadScene(GameScene.LobyScene);
+    }
+
+    public void ResetBestScore()
+    {
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
+        ScoreManager.Instance.BestScore = PlayerPrefs.GetInt("BestScore", 0);
+        Debug.Log("최고점수는 " + ScoreManager.Instance.BestScore + "입니다!");
     }
 }
