@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEditor;
 using static GameSceneManager;
 
 public class SceneChanger : MonoBehaviour
@@ -25,7 +26,7 @@ public class SceneChanger : MonoBehaviour
         mainGameButton.onClick.AddListener(() => OnButtonClicked("LobyRunTrigger", GameScene.MainScene));
         shopButton.onClick.AddListener(() => OnButtonClicked("LobyRunTrigger", GameScene.ShopScene));
         lobyButton.onClick.AddListener(() => OnButtonClicked("LobyRunTrigger", GameScene.LobyScene));
-        //exitbutton.onClick.AddListener(() => OnButtonClicked("LobyRunTrigger", GameScene.ShopScene));
+        exitButton.onClick.AddListener(OnExitButtonClicked);
     }
 
     // Update is called once per frame
@@ -44,6 +45,17 @@ public class SceneChanger : MonoBehaviour
 
         yield return new WaitForSeconds(delayBeforeLoad);
         LoadScene(scene);
+    }
+    void OnExitButtonClicked()
+    {
+        Debug.Log("게임 종료~");
+#if UNITY_EDITOR
+        EditorApplication.isPlaying = false;
+#else
+    Application.Quit();
+
+    }
+#endif
     }
 
 }
