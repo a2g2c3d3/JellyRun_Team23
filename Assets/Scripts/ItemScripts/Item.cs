@@ -20,8 +20,10 @@ namespace Item
         public SpriteRenderer SpriteRenderer;
         public ScoreTestScript testScore;
         private Health hp;
-        
+
+        private bool isBoost = false;
         public EffectType type;                     //인스펙터창 에서 타입 설정하기
+        float beforeSpeed;
         public int Effect;
 
         private void Awake()
@@ -36,13 +38,12 @@ namespace Item
         {
             if (collision.CompareTag("Player"))
             {
- 
                 GetEfeectType();
             }
         }
 
         /**타입별로 아이템을 나눠서 실행 할 함수 결정*/
-        protected void GetEfeectType()      
+        protected void GetEfeectType()
         {
             switch (type)
             {
@@ -82,25 +83,30 @@ namespace Item
         /**속도 변경 로직*/
         protected IEnumerator ChangeSpeed()
         {
-            StageManager.Instance.ApplyBooster();
-            float beforeSpeed = playerMovement.speed;
-            playerMovement.speed = 25;
-            //만약 사라지는 모션이 생긴다면 추가해주기 애니메이터에서 파라미터 만들어 추가 해 주면 될 것 같음
-            SpriteRenderer.gameObject.SetActive(false);
-            yield return new WaitForSeconds(3f);
-
-
-            float duration = 1.0f; // 속도를 줄이는 데 걸릴 시간
-            float elapsed = 0f;    // 진행률
-
-            while (elapsed < duration)
+            if (playerMovement.speed != 25)
             {
-                elapsed += Time.deltaTime;
-                playerMovement.speed = Mathf.Lerp(25f, beforeSpeed, elapsed / duration);
-                yield return null;
-            }
+                StageManager.Instance.ApplyBooster();
 
-            playerMovement.speed = beforeSpeed; //혹시 모르니까 값 다시 넣어주기
+                beforeSpeed = playerMovement.speed;
+
+                playerMovement.speed = 25;
+                SpriteRenderer.gameObject.SetActive(false);       //만약 사라지는 모션이 생긴다면 추가해주기 애니메이터에서 파라미터 만들어 추가 해 주면 될 것 같음
+
+                yield return new WaitForSeconds(3f);
+
+                float duration = 1.0f; // 속도를 줄이는 데 걸릴 시간
+                float elapsed = 0f;    // 진행률
+
+                while (elapsed < duration)
+                {
+                    elapsed += Time.deltaTime;
+                    playerMovement.speed = Mathf.Lerp(25f, beforeSpeed, elapsed / duration);
+                    yield return null;
+                }
+
+                playerMovement.speed = beforeSpeed; //혹시 모르니까 값 다시 넣어주기
+            }
+            SpriteRenderer.gameObject.SetActive(false);
         }
     }
 }
