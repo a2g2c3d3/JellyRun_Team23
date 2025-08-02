@@ -19,17 +19,17 @@ public class CatFollowerLoader : MonoBehaviour
             if(catPrefab != null)
             {
                 GameObject cat = Instantiate(catPrefab, playertransform.position + new Vector3(1f,0,0), Quaternion.identity);
-                //cat.AddComponent<CatFollowPlayer>().target = playertransform;
+                
 
             }
             else
             {
-
+                Debug.Log("냥이 오브젝트를 확인해봐");
             }
         }
         else
         {
-            
+            Debug.Log("리소스를 불러오는데 문제가 있어");
         }
     }
 

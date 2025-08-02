@@ -1346,6 +1346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1793325226}
+  bestScoreText: {fileID: 0}
 --- !u!1001 &757145230
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1438,6 +1439,7 @@ MonoBehaviour:
   maxHealth: 100
   timeDrainRate: 1
   fallThresholdY: -5
+  playerCollider: {fileID: 0}
 --- !u!114 &757145234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2177,7 +2179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4569f2e37133605489604fd847cff67a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpSlider: {fileID: 0}
+  hpImage: {fileID: 0}
 --- !u!1 &1530296185
 GameObject:
   m_ObjectHideFlags: 0
@@ -2233,7 +2235,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popupPanel: {fileID: 947963565}
   scoreText: {fileID: 1907581084}
-  timeText: {fileID: 1888435197}
 --- !u!114 &1530296188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2261,6 +2262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1907581084}
+  bestScoreText: {fileID: 0}
 --- !u!1001 &1640562900
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2592,6 +2594,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 565250903}
     m_Modifications:
+    - target: {fileID: 402608769234378780, guid: e296abad40d3fde488fd1c4241770f1a, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 757145232}
     - target: {fileID: 5007344735287196494, guid: e296abad40d3fde488fd1c4241770f1a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -40
