@@ -19,7 +19,7 @@ namespace Player
         private bool isKnockback = false;
 
         private bool isInvincible = false; // 무적
-        [SerializeField] private float invincibleDuration = 1f;
+        [SerializeField] private float invincibleDuration = 2f;
 
         private bool isJumping = false;
         private bool isSliding = false;
@@ -102,6 +102,16 @@ namespace Player
         // 슬라이딩 구현
         public void Slide()
         {
+            if (Input.GetKeyUp(KeyCode.LeftShift) && isSliding)
+            {
+                isSliding = false;
+                normalCollider.enabled = true;
+                normalCollider.offset = new Vector2(0f, 0f);
+                normalCollider.size = new Vector2(1f, 1.428571f);
+                normalCollider.direction = CapsuleDirection2D.Vertical;
+
+                anim.SetBool("isSliding", false);
+            }
             if (isControlLocked) return;
             if (Input.GetKeyDown(KeyCode.LeftShift) && !isSliding)
             {
@@ -115,16 +125,7 @@ namespace Player
                 anim.SetBool("isSliding", true);
             }
 
-            if (Input.GetKeyUp(KeyCode.LeftShift) && isSliding)
-            {
-                isSliding = false;
-                normalCollider.enabled = true;
-                normalCollider.offset = new Vector2(0f, 0f);
-                normalCollider.size = new Vector2(1f, 1.428571f);
-                normalCollider.direction = CapsuleDirection2D.Vertical;
-                
-                anim.SetBool("isSliding", false);
-            }
+           
         }
 
         public void Damage()
