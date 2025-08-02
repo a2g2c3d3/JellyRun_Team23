@@ -46,7 +46,7 @@ public class PatternManager : MonoBehaviour
 
     public void DecreaseSpawnInterval()
     {
-        patternSpawnInterval = Mathf.Max(1f, patternSpawnInterval - 2f);
+        patternSpawnInterval = Mathf.Max(1f, patternSpawnInterval - 2.2f);
     }
     public void ResetSpawnTime()
     {

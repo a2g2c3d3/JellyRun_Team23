@@ -9,14 +9,13 @@ using UnityEngine.UI;
 public class StageClearUi : MonoBehaviour
 {
     public PlayerMovement _player;
-    public TextMeshProUGUI textMeshProUGUI;
-    [SerializeField] private GameObject popupPanel;
+    public TextMeshProUGUI[] textMeshProUGUI;
+    [SerializeField] private GameObject[] popupPanel;
     private int stageNum = 0;
     private float beforeSpeed;
 
     void Start()
     {
-        
         OffShowStage();
     }
 
@@ -29,32 +28,48 @@ public class StageClearUi : MonoBehaviour
 
 
     public void ChangeStage()
-    {
-        if (StageManager.Instance.stageTimer == 30)
+    {   
+        if (StageManager.Instance.stageTimer == 30 && stageNum < 5)
         {
-            
-            
             stageNum++;
-            textMeshProUGUI.text = "Stage " + stageNum;
-            ShowStage();
+
+            if (stageNum == 5)
+            {
+                textMeshProUGUI[stageNum-1].text = "Endless Stage";
+                ShowStage();
+            }
+            else
+            {
+                textMeshProUGUI[stageNum - 1].text = "Stage " + stageNum;
+                ShowStage();
+            }
             Invoke("OffShowStage", 2f);
+            return;
         }
         return;
     }
 
     public void ShowStage()
     {
-        popupPanel.SetActive(true);
-        textMeshProUGUI.gameObject.SetActive(true);
+        
+       
+        popupPanel[stageNum-1].SetActive(true);
+        textMeshProUGUI[stageNum-1].gameObject.SetActive(true);
+        
         beforeSpeed = _player.speed;
         _player.speed = 25;
         PatternManager.Instance.timer = 3;
 
     }
+
     public void OffShowStage()
     {
-        popupPanel.SetActive(false);
-        textMeshProUGUI.gameObject.SetActive(false);
+        foreach (GameObject stageNum in popupPanel)
+        {
+            stageNum.SetActive(false);
+        }
+
+       
 
         if(_player.speed == 25)
         _player.speed = beforeSpeed;
