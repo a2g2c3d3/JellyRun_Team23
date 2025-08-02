@@ -40,6 +40,12 @@ namespace Player
         {
             Jump();
             Slide();
+
+            if (Input.GetKeyDown(KeyCode.LeftShift) && isJumping)
+            {
+                DownJump();
+                Invoke("ReturnJump", 0.5f);
+            }   
         }
 
         private void FixedUpdate()
@@ -145,6 +151,16 @@ namespace Player
             isInvincible = false;
 
             // isKnockback은 착지 후에 풀림
+        }
+
+        private void DownJump()     //중력
+        {
+            rb.gravityScale = 5f;
+        }
+
+        private void ReturnJump()
+        {
+            rb.gravityScale = 1f;
         }
 
 

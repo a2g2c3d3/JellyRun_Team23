@@ -11,48 +11,56 @@ public class StageClearUi : MonoBehaviour
     public PlayerMovement _player;
     public TextMeshProUGUI[] textMeshProUGUI;
     [SerializeField] private GameObject[] popupPanel;
-    private int stageNum;
+    private int stageNum = 0;
+    private bool stageChanged = false;
 
     void Start()
     {
-        stageNum = 0;
         OffShowStage();
     }
 
     // Update is called once per frame
     void Update()
     {
-        ChangeStage();
+        if (StageManager.Instance.stageTimer == 30 && !stageChanged && stageNum < 5)
+        {
+            ChangeStage();
+            stageChanged = true;
+        }
+
+        // stageTimer가 30이 아닐 때는 다시 실행 가능하게 만듦
+        if (StageManager.Instance.stageTimer != 30)
+        {
+            stageChanged = false;
+        }
     }
 
 
     public void ChangeStage()
-    {   
-        if (StageManager.Instance.stageTimer == 30 && stageNum < 5)
-        {
-            stageNum++;
+    {
+        stageNum++;
+        Debug.LogError(stageNum);
 
-            if (stageNum == 5)
-            {
-                textMeshProUGUI[stageNum-1].text = "Endless Stage";
-                ShowStage();
-            }
-            else
-            {
-                textMeshProUGUI[stageNum - 1].text = "Stage " + stageNum;
-                ShowStage();
-            }
-            Invoke("OffShowStage", 2f);
-            return;
+        if (stageNum == 5)
+        {
+            textMeshProUGUI[stageNum - 1].text = "Endless Stage";
+            ShowStage();
+
         }
+        else
+        {
+            textMeshProUGUI[stageNum - 1].text = "Stage " + stageNum;
+            ShowStage();
+        }
+        Invoke("OffShowStage", 2f);
         return;
     }
 
     public void ShowStage()
     {
-        
-        popupPanel[stageNum-1].SetActive(true);
-        textMeshProUGUI[stageNum-1].gameObject.SetActive(true);
+
+        popupPanel[stageNum - 1].SetActive(true);
+        textMeshProUGUI[stageNum - 1].gameObject.SetActive(true);
 
         _player.speed = 25;
         PatternManager.Instance.timer = 3;
@@ -66,7 +74,7 @@ public class StageClearUi : MonoBehaviour
             stageNum.SetActive(false);
         }
         if (_player.speed == 25)
-            _player.speed = 5+(stageNum*2);
+            _player.speed = 5 + (stageNum * 2);
     }
 
 }
