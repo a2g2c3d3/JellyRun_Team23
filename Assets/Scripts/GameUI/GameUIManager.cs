@@ -66,12 +66,14 @@ public class GameUIManager : MonoBehaviour
     /// </summary>
     public void HandleToggleSettingsPopup()
     {
+        if (ResultPopupUI.Instance.isResultShown == true) return;
         if (settingsPopup == null) return;
 
         bool isActive = !settingsPopup.activeSelf;
         settingsPopup.SetActive(isActive);
 
         Time.timeScale = isActive ? 0f : 1f;
+        
     }
 
     /// <summary>
@@ -88,7 +90,12 @@ public class GameUIManager : MonoBehaviour
     /// </summary>
     public void HandleTemporaryStop()
     {
-        Time.timeScale = 0f;
+        if(Time.timeScale != 0)
+        {
+            Time.timeScale = 0f;
+            return;
+        }
+        Time.timeScale = 1f;
         // 필요하다면 여기에 팝업 UI를 활성화하는 코드를 추가할 수 있습니다.
         // 예: if (pausePopup != null) pausePopup.SetActive(true);
     }
