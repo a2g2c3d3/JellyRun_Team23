@@ -1513,7 +1513,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: eac343769e7616542bfe2c7a1ad2b601, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b0c40d3ba3549254986f64d3f4b0bf69, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1589,7 +1589,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -711296728, guid: cdf02e8547b7ee641afbf0cc8e97f1ac, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b0c40d3ba3549254986f64d3f4b0bf69, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2220,7 +2220,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1807378792, guid: 8b6e8efa17a5f6f4eb4af93127308ed9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b0c40d3ba3549254986f64d3f4b0bf69, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2316,7 +2316,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 06e643a0ce79dd94480e092cc6b4673f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b0c40d3ba3549254986f64d3f4b0bf69, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2465,7 +2465,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.6745283, g: 0.9792118, b: 1, a: 0}
+  m_BackGroundColor: {r: 0.29369885, g: 0.75769, b: 0.8301887, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2973,7 +2973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelImage: {fileID: 4274143537823122405}
-  maxTime: 60
+  maxTime: 10
 --- !u!224 &2037188132053955859
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3033,6 +3033,7 @@ GameObject:
   - component: {fileID: 491928362164260421}
   - component: {fileID: 3357588634043267528}
   - component: {fileID: 2993370508275053385}
+  - component: {fileID: 7944691843614428755}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3123,8 +3124,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4281127409
+  m_fontColor: {r: 0.9433962, g: 0.8185613, b: 0.17354932, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5006,6 +5007,19 @@ Transform:
   - {fileID: 8369054229398691928}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7944691843614428755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2174824268483019716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04f7046922780ba42a58e98e915ad85a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!222 &7991977127404817673
 CanvasRenderer:
   m_ObjectHideFlags: 0

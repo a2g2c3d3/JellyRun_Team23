@@ -12,7 +12,6 @@ public class StageClearUi : MonoBehaviour
     public TextMeshProUGUI[] textMeshProUGUI;
     [SerializeField] private GameObject[] popupPanel;
     private int stageNum = 0;
-    private float beforeSpeed;
 
     void Start()
     {
@@ -23,7 +22,6 @@ public class StageClearUi : MonoBehaviour
     void Update()
     {
         ChangeStage();
-
     }
 
 
@@ -52,11 +50,9 @@ public class StageClearUi : MonoBehaviour
     public void ShowStage()
     {
         
-       
         popupPanel[stageNum-1].SetActive(true);
         textMeshProUGUI[stageNum-1].gameObject.SetActive(true);
-        
-        beforeSpeed = _player.speed;
+
         _player.speed = 25;
         PatternManager.Instance.timer = 3;
 
@@ -68,11 +64,8 @@ public class StageClearUi : MonoBehaviour
         {
             stageNum.SetActive(false);
         }
-
-       
-
-        if(_player.speed == 25)
-        _player.speed = beforeSpeed;
+        if (_player.speed == 25)
+            _player.speed = 5+(stageNum*2);
     }
 
 }
