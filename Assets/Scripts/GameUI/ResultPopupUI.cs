@@ -45,7 +45,7 @@ public class ResultPopupUI : MonoBehaviour
         // 최종 점수 표시
         if (scoreText != null && ScoreManager.Instance != null)
         {
-            scoreText.text = $"Score: {ScoreManager.Instance.Score}";
+            scoreText.text = $"{ScoreManager.Instance.Score}";
         }
     }
 
