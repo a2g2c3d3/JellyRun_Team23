@@ -6,12 +6,19 @@ using TMPro; // TextMeshPro 네임스페이스 추가
 
 public class ResultPopupUI : MonoBehaviour
 {
+    public static ResultPopupUI Instance;
+
     [Header("UI 요소")]
     [SerializeField] private GameObject popupPanel;
     [SerializeField] private TextMeshProUGUI scoreText;
 
-    private bool isResultShown = false;
+    public bool isResultShown = false;
 
+    private void Awake()
+    {
+        if (Instance == null)
+        Instance = this;     
+    }
     private void Start()
     {
         if (popupPanel != null) popupPanel.SetActive(false);
@@ -25,17 +32,6 @@ public class ResultPopupUI : MonoBehaviour
         //  해제도 OnDisable 말고 OnDestroy로
         StageUIManager.OnGameFinished -= ShowResult;
     }
-
-    //private void OnEnable()
-    //{
-    //    
-    //    StageUIManager.OnGameFinished += ShowResult;
-    //}
-
-    //private void OnDisable()
-    //{
-    //    StageUIManager.OnGameFinished -= ShowResult;
-    //}
 
     private void ShowResult()
     {
