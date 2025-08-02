@@ -11,8 +11,6 @@ public class ScoreUI : MonoBehaviour
 
     private void Start()
     {
-        ScoreManager.Instance.LoadBestScore();
-        UpdateBestScoreText(ScoreManager.Instance.BestScore);
         if (scoreText == null)
         {
             enabled = false;
@@ -20,23 +18,11 @@ public class ScoreUI : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        //현재 점수로 초기화
-        if (ScoreManager.Instance != null)
-        {
-            UpdateScoreText(ScoreManager.Instance.Score);
-
-            UpdateBestScoreText(ScoreManager.Instance.BestScore);
-
-        }
-
-    }
 
     private void OnEnable()
     {
         ScoreManager.OnScoreChanged += UpdateScoreText;
-        //ScoreManager.OnBestScoreChanged += UpdateBestScoreText; //구독
+        ScoreManager.OnBestScoreChanged += UpdateBestScoreText; //구독
         Health.OnPlayerDead += () => UpdateBestScoreText(ScoreManager.Instance.BestScore);
     }
   
@@ -45,7 +31,7 @@ public class ScoreUI : MonoBehaviour
     private void OnDisable()
     {
         ScoreManager.OnScoreChanged -= UpdateScoreText;
-        //ScoreManager.OnBestScoreChanged -= UpdateBestScoreText; //구취
+        ScoreManager.OnBestScoreChanged -= UpdateBestScoreText; //구취
         Health.OnPlayerDead -= () => UpdateBestScoreText(ScoreManager.Instance.BestScore);
     }
 

@@ -34,6 +34,7 @@ public class ScoreManager : MonoBehaviour
     public void AddScore(int amount)
     {
         Score += amount;
+        OnScoreChanged?.Invoke(Score);
         //if (OnScoreChanged != null)
         //{
         //    BestScore = Score;
