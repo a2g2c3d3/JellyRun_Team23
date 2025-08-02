@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ShopItem : MonoBehaviour
 {
+    public Animator animator;
+    
     bool status = false;
     public void SelectCharacter(string characterName)
     {
@@ -13,13 +15,16 @@ public class ShopItem : MonoBehaviour
             PlayerPrefs.SetString("SelectedCharacter", characterName);
             PlayerPrefs.Save();
             Debug.Log($"SelectedCharacter: {characterName}");
+            animator.SetTrigger("CatClickTriggerTrue");
             status = true;
+            
         }
         else
         {
             PlayerPrefs.SetString("SelectedCharacter", null);
             PlayerPrefs.Save();
             Debug.Log($"SelectedCharacter: {null}");
+            animator.SetTrigger("CatClickTriggerFalse");
             status = false;
 
 
