@@ -6,7 +6,6 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour
 {
     public PlayerMovement player; //플레이어 속도 받아오기
-    public int damage = 30; // 입힐 데미지량
     private Health hp; //체력 가져오기
 
     private void Awake()
@@ -22,7 +21,7 @@ public class Obstacle : MonoBehaviour
             if (player.speed != 25)
             {
                 player.speed = 5f; //기본속도로 돌려놓기
-                hp.TakeDamage(100);
+                hp.TakeDamage(20);
                 player.Damage();
                 StageManager.Instance.KnockbackTime();
                 PatternManager.Instance.ResetSpawnTime();

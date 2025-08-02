@@ -7,15 +7,15 @@ public class StageManager : MonoBehaviour
 
 
     public GameObject[] stagePrefabs;       // Stage1, Stage2, ... 프리팹들
-    public float stageDuration = 10f;       // 스테이지 전환 시간
+    public float stageDuration = 30f;       // 스테이지 전환 시간
     public float stageSpacing = 15f;
     public Transform player;
     public float TotalGameTime => stageDuration * stagePrefabs.Length;
-    public float ElapsedTime => (currentStageIndex * stageDuration) + (stageDuration - timer);
+    public float ElapsedTime => (currentStageIndex * stageDuration) + (stageDuration - stageTimer);
 
 
     private int currentStageIndex = 0;
-    [SerializeField] private float timer;
+    [SerializeField] public float stageTimer;
     private GameObject currentStageInstance;
 
     private void Awake()
@@ -32,16 +32,16 @@ public class StageManager : MonoBehaviour
 
     void Start()
     {
-        timer = stageDuration;
+        stageTimer = stageDuration;
 
         SpawnStage(currentStageIndex);
     }
 
     void Update()
     {
-        timer -= Time.deltaTime;
+        stageTimer -= Time.deltaTime;
 
-        if (timer <= 0f)
+        if (stageTimer <= 0f)
         {
 
             // 이전 스테이지 제거
@@ -52,7 +52,7 @@ public class StageManager : MonoBehaviour
             }
 
             currentStageIndex++;
-            timer = stageDuration;
+            stageTimer = stageDuration;
 
             if (currentStageIndex < stagePrefabs.Length)
             {
@@ -77,14 +77,14 @@ public class StageManager : MonoBehaviour
     public void ApplyBooster()
     {
         //FindObjectOfType<StageProgressUi>().FlashBoosterEffect();
-        timer -= 3f;
-        if (timer < 0f) timer = 0f;
+        stageTimer -= 3f;
+        if (stageTimer < 0f) stageTimer = 0f;
     }
 
     public void KnockbackTime()
     {
-        timer += 3f;
-        if (timer < 0f) timer = 0f;
+        stageTimer += 3f;
+        if (stageTimer < 0f) stageTimer = 0f;
     }
 
 

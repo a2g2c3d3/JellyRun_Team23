@@ -8,7 +8,7 @@ public class PatternManager : MonoBehaviour
     private float patternSpacing = 15f;  //플레이어와 패턴간의 간격
     public float patternSpawnInterval = 10f; //패턴의 주기
 
-    [SerializeField] private float timer;
+    [SerializeField] public float timer;
 
     void Awake()
     {
@@ -18,7 +18,7 @@ public class PatternManager : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject); 
+            Destroy(gameObject);
         }
     }
 
@@ -29,6 +29,7 @@ public class PatternManager : MonoBehaviour
         {
             SpawnPattern();
             timer = patternSpawnInterval;
+            Debug.LogWarning("멋진코딩");
         }
     }
 
