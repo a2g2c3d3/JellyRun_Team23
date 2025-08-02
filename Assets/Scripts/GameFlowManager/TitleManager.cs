@@ -5,13 +5,13 @@ using static GameSceneManager;
 
 public class TitleManager : MonoBehaviour
 {
-    private Animator animator;
+    public Animator animator;
     private float delay = 2f;
     private bool IsLoading = false;
 
     private void Awake()
     {
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
     }
     private void Update()
     {
@@ -19,6 +19,7 @@ public class TitleManager : MonoBehaviour
         {
             IsLoading = true;
             animator.SetTrigger("TitlePlayerRunTrigger");
+            
             StartCoroutine(LoadSceneWithDelay(GameScene.LobyScene));
         }   
     }

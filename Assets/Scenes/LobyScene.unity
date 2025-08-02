@@ -1314,7 +1314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 564413595}
   m_Layer: 0
-  m_Name: Button
+  m_Name: SceneChangeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1851,7 +1851,7 @@ GameObject:
   - component: {fileID: 899557455}
   - component: {fileID: 899557456}
   m_Layer: 0
-  m_Name: LobyManager
+  m_Name: SceneChangeManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1887,7 +1887,7 @@ MonoBehaviour:
   mainGameButton: {fileID: 456366747}
   shopButton: {fileID: 364021835}
   lobyButton: {fileID: 540554486}
-  exitButton: {fileID: 0}
+  exitButton: {fileID: 540554486}
   animator: {fileID: 1216402011}
   delayBeforeLoad: 2
 --- !u!1 &916897470
@@ -3462,7 +3462,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1950763980
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3795,5 +3795,5 @@ SceneRoots:
   - {fileID: 1803448527}
   - {fileID: 213807024}
   - {fileID: 564413595}
-  - {fileID: 1949734332}
   - {fileID: 18437690}
+  - {fileID: 1949734332}
