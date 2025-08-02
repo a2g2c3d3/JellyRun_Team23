@@ -47,17 +47,6 @@ public class ScoreManager : MonoBehaviour
         Debug.Log(PlayerPrefs.GetInt(BestScoreKey, 0));
     }
 
-   
-
-    //public void SaveBestScore()
-    //{
-    //    if (BestScore > PlayerPrefs.GetInt(BestScoreKey, 0))
-    //    {
-    //        PlayerPrefs.SetInt(BestScoreKey, BestScore);
-    //        PlayerPrefs.Save(); // 변경 사항을 즉시 저장
-    //        OnBestScoreChanged?.Invoke(BestScore);
-    //    }
-    //}
 
     public void SaveBestScore()
     {
