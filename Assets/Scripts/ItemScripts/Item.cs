@@ -26,11 +26,15 @@ namespace Item
         float beforeSpeed;
         public int Effect;
 
+        public AudioClip jellySound;
+        private AudioSource audioSource;
+
         private void Awake()
         {
             playerMovement = FindObjectOfType<PlayerMovement>();
             testScore = FindObjectOfType<ScoreTestScript>();
             hp = FindObjectOfType<Health>();
+            audioSource = GetComponent<AudioSource>();
         }
 
         /**충돌시 값을 변경할 함수 실행*/
@@ -71,13 +75,20 @@ namespace Item
         /**점수 변경 로직*/
         protected void AddScore()
         {
+            if (SpriteRenderer.gameObject.activeSelf == true)
+            {
+                audioSource.clip = jellySound;
+                audioSource.Play();
+            }
+
             ScoreManager.Instance.AddScore(Effect);
             testScore.score += Effect;      //TODO : 나중에 UI랑 연결해줘야함
             if (playerMovement.speed < 15)
             {
                 playerMovement.speed = testScore.score % 5 == 0 ? playerMovement.speed + 1 : playerMovement.speed; // 점수 5점 마다 속도 0.5 증가 로직
             }
-            this.gameObject.SetActive(false);
+            
+            SpriteRenderer.gameObject.SetActive(false);
         }
 
         /**속도 변경 로직*/
