@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class ShopItem : MonoBehaviour
 {
+    public AudioSource audioSource;
     public Animator animator;
     
     bool status = false;
     public void SelectCharacter(string characterName)
     {
-
+        audioSource.Play();
         if (!status)
         {
             PlayerPrefs.SetString("SelectedCharacter", characterName);
@@ -17,7 +18,6 @@ public class ShopItem : MonoBehaviour
             Debug.Log($"SelectedCharacter: {characterName}");
             animator.SetTrigger("CatClickTriggerTrue");
             status = true;
-            
         }
         else
         {
@@ -26,9 +26,6 @@ public class ShopItem : MonoBehaviour
             Debug.Log($"SelectedCharacter: {null}");
             animator.SetTrigger("CatClickTriggerFalse");
             status = false;
-
-
-
         }
     }
 }

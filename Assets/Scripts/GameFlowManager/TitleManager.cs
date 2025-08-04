@@ -6,6 +6,7 @@ using static GameSceneManager;
 public class TitleManager : MonoBehaviour
 {
     public Animator animator;
+    public AudioSource audioSource;
     private float delay = 2f;
     private bool IsLoading = false;
 
@@ -21,6 +22,7 @@ public class TitleManager : MonoBehaviour
             animator.SetTrigger("TitlePlayerRunTrigger");
             
             StartCoroutine(LoadSceneWithDelay(GameScene.LobyScene));
+            audioSource.Play();
         }   
     }
 

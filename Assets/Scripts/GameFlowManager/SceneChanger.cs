@@ -13,6 +13,7 @@ public class SceneChanger : MonoBehaviour
     public Button shopButton;
     public Button lobyButton;
     public Button exitButton;
+    public AudioSource audioSource;
     public Animator animator;
     public float delayBeforeLoad = 2f;
 
@@ -27,6 +28,7 @@ public class SceneChanger : MonoBehaviour
         shopButton.onClick.AddListener(() => OnButtonClicked("LobyRunTrigger", GameScene.ShopScene));
         lobyButton.onClick.AddListener(() => OnButtonClicked("LobyRunTrigger", GameScene.LobyScene));
         exitButton.onClick.AddListener(OnExitButtonClicked);
+        
     }
 
     // Update is called once per frame
@@ -39,10 +41,10 @@ public class SceneChanger : MonoBehaviour
     {
         animator.SetTrigger(triggerName);
         StartCoroutine(LoadMainSceneWithDelay(targetScene));
+        audioSource.Play();
     }
     IEnumerator LoadMainSceneWithDelay(GameScene scene)
     {
-
         yield return new WaitForSeconds(delayBeforeLoad);
         LoadScene(scene);
     }
