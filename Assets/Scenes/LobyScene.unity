@@ -3891,10 +3891,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgmSlider: {fileID: 2030386316}
   audioSource: {fileID: 1149095068}
-  titleClip: {fileID: 8300000, guid: 10a01f62885082c499bfd703479052b0, type: 3}
-  lobyClip: {fileID: 8300000, guid: f042bd451f48441e19db367bc0063f53, type: 3}
-  mainClip: {fileID: 8300000, guid: 00a2000d5ecbf448292d55cbd53cb70e, type: 3}
-  shopClip: {fileID: 8300000, guid: cdb9579d85b4d4baaa28805e4a02b9a4, type: 3}
+  titleClip: {fileID: 8300000, guid: f042bd451f48441e19db367bc0063f53, type: 3}
+  lobyClip: {fileID: 8300000, guid: 3667e07cc61d04147b318134599a34a7, type: 3}
+  mainClip: {fileID: 8300000, guid: 01f5c344c6f5044778980143a0fc1eb1, type: 3}
+  shopClip: {fileID: 8300000, guid: f3775a89bfe330d4aa0739f3da64aacd, type: 3}
 --- !u!82 &1149095068
 AudioSource:
   m_ObjectHideFlags: 0
