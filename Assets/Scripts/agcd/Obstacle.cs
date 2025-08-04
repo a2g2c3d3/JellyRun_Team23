@@ -20,6 +20,8 @@ public class Obstacle : MonoBehaviour
            
             if (player.speed != 25)
             {
+                AudioManager.instance.CrushSound(); //사운드
+
                 player.speed = 5f; //기본속도로 돌려놓기
                 hp.TakeDamage(20);
                 player.Damage();

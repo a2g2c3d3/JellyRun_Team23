@@ -15,6 +15,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip scoreClip;
     public AudioClip hpClip;
     public AudioClip boosterClip;
+    public AudioClip crushClip;
 
     private void Awake()
     {
@@ -54,4 +55,8 @@ public class AudioManager : MonoBehaviour
         sfx.PlayOneShot(boosterClip);
     }
 
+    public void CrushSound()
+    {
+        sfx.PlayOneShot(crushClip);
+    }
 }
