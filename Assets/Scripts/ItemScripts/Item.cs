@@ -66,10 +66,14 @@ namespace Item
         /**체력 변경 로직*/
         protected void ChangeHP()
         {
+            if (SpriteRenderer.gameObject.activeSelf == true) // 스프라이트가 켜져있을때만 소리가 남
+            {
+                AudioManager.instance.HpSound();
+            }
+           
             hp.PlusHP(Effect);
             testScore.hp += Effect;
             this.gameObject.SetActive(false);
-            //TODO : 나중에 UI랑 연결 해줘야함 로직은 스코어랑 동일
         }
 
         /**점수 변경 로직*/
@@ -77,11 +81,11 @@ namespace Item
         {
             if (SpriteRenderer.gameObject.activeSelf == true)
             {
-                audioSource.clip = jellySound;
-                audioSource.Play();
+                AudioManager.instance.ScoreSound();
             }
 
             ScoreManager.Instance.AddScore(Effect);
+           
             testScore.score += Effect;      //TODO : 나중에 UI랑 연결해줘야함
             if (playerMovement.speed < 15)
             {
@@ -96,6 +100,11 @@ namespace Item
         {
             if (playerMovement.speed != 25)
             {
+                if (SpriteRenderer.gameObject.activeSelf == true)
+                {
+                    AudioManager.instance.BoosterSound();
+                }
+
                 StageManager.Instance.ApplyBooster();
 
                 beforeSpeed = playerMovement.speed;
