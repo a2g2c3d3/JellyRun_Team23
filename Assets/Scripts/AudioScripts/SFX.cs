@@ -21,10 +21,10 @@ public class SFX : MonoBehaviour
         audioSource.volume = savedVolume;
 
         // 슬라이더 이벤트 연결
-        sfxSlider.onValueChanged.AddListener(SetBGMVolume);
+        sfxSlider.onValueChanged.AddListener(SetSFXVolume);
     }
 
-    public void SetBGMVolume(float volume)
+    public void SetSFXVolume(float volume)
     {
         audioSource.volume = volume;
         PlayerPrefs.SetFloat("SFXVolume", volume); // 저장
