@@ -63,7 +63,7 @@ public class Health : MonoBehaviour
 
     }
 
-   
+
     private void Die()
     {
         // 이미 사망한 상태라면 함수를 즉시 종료합니다.
