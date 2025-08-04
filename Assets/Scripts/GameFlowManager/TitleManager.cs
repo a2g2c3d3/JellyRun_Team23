@@ -1,3 +1,4 @@
+using Player;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,20 +6,20 @@ using static GameSceneManager;
 
 public class TitleManager : MonoBehaviour
 {
+    public Transform player;
     public Animator animator;
     public AudioSource audioSource;
     private float delay = 2f;
-    private bool IsLoading = false;
 
     private void Awake()
     {
-        //animator = GetComponent<Animator>();
+        
     }
     private void Update()
     {
-        if (Input.anyKey && !IsLoading)
+        if (Input.anyKey && player.localPosition.x >= 5)
         {
-            IsLoading = true;
+            Debug.Log("함수가실행됨");
             animator.SetTrigger("TitlePlayerRunTrigger");
             
             StartCoroutine(LoadSceneWithDelay(GameScene.LobyScene));
@@ -26,6 +27,10 @@ public class TitleManager : MonoBehaviour
         }   
     }
 
+    public void runToLobby()
+    {
+
+    }
 
     IEnumerator LoadSceneWithDelay(GameScene Scene)
     {
