@@ -8,6 +8,8 @@ namespace Player
 {
     public class PlayerMovement : MonoBehaviour
     {
+        [SerializeField] private AudioClip jumpSound;
+        private AudioSource audioSource;
         private Rigidbody2D rb;
         public CapsuleCollider2D normalCollider;
         private Animator anim;
@@ -28,6 +30,7 @@ namespace Player
 
         void Start()
         {
+            audioSource = GetComponent<AudioSource>();
             rb = GetComponent<Rigidbody2D>();
             currentJumpCount = jumpCount;
 
@@ -89,13 +92,24 @@ namespace Player
                 if (currentJumpCount == 2)
                 {
                     anim.SetBool("isJumping", true);
+                    if (jumpSound != null && audioSource != null)
+                    {
+                        audioSource.PlayOneShot(jumpSound);
+                    }
                 }
                 else if (currentJumpCount == 1)
                 {
                     anim.SetTrigger("isDoubleJumping");
+                    if (jumpSound != null && audioSource != null)
+                    {
+                        audioSource.ignoreListenerPause = true;
+                        audioSource.PlayOneShot(jumpSound);
+                       
+                    }
                 }
 
                 currentJumpCount--;
+                
             }
         }
 
