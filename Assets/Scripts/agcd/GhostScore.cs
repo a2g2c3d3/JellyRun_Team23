@@ -1,31 +1,42 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class GhostScore : MonoBehaviour
 {
-    [SerializeField] private Image panelImage; // 배경 이미지
-    [SerializeField] private float maxTime = 10f; // 몇 초에 완전 불투명해질지
-    private float elapsedTime = 0f;
+    [SerializeField] private Image panelImage;        // 깜빡일 이미지
+    [SerializeField] private float flashSpeed = 10f;   // 깜빡임 속도 (커질수록 빠름)
+    [SerializeField] private float maxAlpha = 1f;     // 가장 밝을 때 투명도
+    [SerializeField] private float minAlpha = 0.2f;   // 가장 어두울 때 투명도
+
+    private Color originalColor;
 
     void Start()
     {
-        // 시작 시 완전 투명하게 초기화
-        Color color = panelImage.color;
-        color.a = 0f;
-        panelImage.color = color;
+        if (panelImage != null)
+            originalColor = panelImage.color; // 원래 색 저장
     }
 
     void Update()
     {
-        if (elapsedTime < maxTime)
+        if (ScoreManager.Instance != null && ScoreManager.Instance.isBestScore)
         {
-            elapsedTime += Time.deltaTime;
-            float alpha = Mathf.Clamp01(elapsedTime / maxTime); // 0~1
-            Color color = panelImage.color;
-            color.a = alpha;
-            panelImage.color = color;
+            float alpha = Mathf.Lerp(minAlpha, maxAlpha, Mathf.Abs(Mathf.Sin(Time.time * flashSpeed)));
+            SetAlpha(alpha);
+        }
+        else
+        {
+            SetAlpha(originalColor.a); // 평소엔 원래 알파값 유지
         }
     }
+
+    private void SetAlpha(float alpha)
+    {
+        if (panelImage == null) return;
+
+        Color color = panelImage.color;
+        color.a = alpha;
+        panelImage.color = color;
+    }
 }
+
+

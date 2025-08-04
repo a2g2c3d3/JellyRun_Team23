@@ -8,6 +8,7 @@ public class ScoreManager : MonoBehaviour
     public int Score { get; private set; }
     public int BestScore { get; set; }
     public string BestScoreKey = "BestScore";
+    public bool isBestScore;
 
     public static event System.Action<int> OnScoreChanged;
     public static event System.Action<int> OnBestScoreChanged;
@@ -23,6 +24,7 @@ public class ScoreManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        isBestScore = false;
     }
 
     private void OnDestroy()
@@ -35,10 +37,10 @@ public class ScoreManager : MonoBehaviour
     {
         Score += amount;
         OnScoreChanged?.Invoke(Score);
-        //if (OnScoreChanged != null)
-        //{
-        //    BestScore = Score;
-        //}
+        if (Score == BestScore) 
+        {
+            isBestScore = true;
+        }
     }
 
     public void LoadBestScore()

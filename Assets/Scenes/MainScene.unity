@@ -7855,7 +7855,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelImage: {fileID: 4274143537823122405}
-  maxTime: 10
+  flashSpeed: 10
+  maxAlpha: 0.6
+  minAlpha: 0.2
 --- !u!224 &2037188132053955859
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7969,15 +7971,14 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3645051135955086497}
+  m_Children: []
   m_Father: {fileID: 7364621720181262211}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_SizeDelta: {x: 120, y: 100}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &2335095397511648168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7998,7 +7999,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8007,8 +8008,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281127409
-  m_fontColor: {r: 0.9433962, g: 0.8185613, b: 0.17354932, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -8488,6 +8489,7 @@ GameObject:
   - component: {fileID: 3731571654078616601}
   - component: {fileID: 3825587770464472983}
   - component: {fileID: 5204802943476468468}
+  - component: {fileID: 5204802943476468469}
   m_Layer: 5
   m_Name: HealthUI
   m_TagString: Untagged
@@ -8572,15 +8574,15 @@ RectTransform:
   m_GameObject: {fileID: 5799863687591973711}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5000001, y: 1.5000001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2328324057688701044}
+  m_Father: {fileID: 7364621720181262211}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 40.000008, y: -39.999985}
+  m_SizeDelta: {x: 20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3669203372279134824
 GameObject:
@@ -8718,14 +8720,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.2}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 53e6d40b445760a42ae16131c828f72c, type: 3}
+  m_Sprite: {fileID: 1874378780, guid: 6a11ff1d3d6d20e43bb99bc8833bd41f, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8907,6 +8909,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5204802943476468469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3416699828292199349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e9bac10071639e4e8f69f1df5a6776b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelImage: {fileID: 5204802943476468468}
+  flashSpeed: 10
+  flashColor: {r: 1, g: 0.84, b: 0, a: 1}
+  player: {fileID: 9090468065117248037}
 --- !u!222 &5411748071403862884
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9232,6 +9250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BestScoreKey: BestScore
+  isBestScore: 0
 --- !u!222 &6431583721073931352
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9546,6 +9565,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2328324057688701044}
+  - {fileID: 3645051135955086497}
   m_Father: {fileID: 8712289080150672881}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
