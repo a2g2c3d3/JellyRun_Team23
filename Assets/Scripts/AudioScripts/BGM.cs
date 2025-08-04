@@ -72,6 +72,7 @@ public class BGM : MonoBehaviour
         if (audioSource.clip != clip)
         {
             audioSource.clip = clip;
+            audioSource.ignoreListenerPause = true;
             audioSource.Play();
         }
     }
