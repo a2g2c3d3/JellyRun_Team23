@@ -12,7 +12,9 @@ public class AudioManager : MonoBehaviour
     [Header("효과음 클립들")]
     public AudioClip jumpClip;
     public AudioClip slideClip;
-
+    public AudioClip scoreClip;
+    public AudioClip hpClip;
+    public AudioClip boosterClip;
 
     private void Awake()
     {
