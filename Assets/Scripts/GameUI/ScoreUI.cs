@@ -7,7 +7,7 @@ using TMPro; // TextMeshPro 네임스페이스 추가
 public class ScoreUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI scoreText;
-    [SerializeField] private TextMeshProUGUI bestScoreText;
+    private TextMeshProUGUI bestScoreText;
 
     private void Start()
     {

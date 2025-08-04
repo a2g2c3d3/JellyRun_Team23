@@ -24,6 +24,7 @@ public class TitleManager : MonoBehaviour
             
             StartCoroutine(LoadSceneWithDelay(GameScene.LobyScene));
             audioSource.Play();
+            return;
         }   
     }
 
