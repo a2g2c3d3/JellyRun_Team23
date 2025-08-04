@@ -27,12 +27,12 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void PlayJump()
+    public void JumpSound()
     {
         sfx.PlayOneShot(jumpClip);
     }
 
-    public void PlaySlide()
+    public void SlideSound()
     {
         sfx.PlayOneShot(slideClip);
     }
