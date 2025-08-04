@@ -6262,7 +6262,7 @@ MonoBehaviour:
   scoreClip: {fileID: 8300000, guid: 43f38b2706c80d842b6abee6d38094ba, type: 3}
   hpClip: {fileID: 8300000, guid: 71e2b71aac0fb634f9ee7b1afc268ed4, type: 3}
   boosterClip: {fileID: 8300000, guid: 10a01f62885082c499bfd703479052b0, type: 3}
-  crushClip: {fileID: 8300000, guid: 7fb16f729bb54df4a901b3993d351f74, type: 3}
+  crushClip: {fileID: 8300000, guid: bb62c449530688a45bbd79937a423d5e, type: 3}
 --- !u!4 &1718840604
 Transform:
   m_ObjectHideFlags: 0

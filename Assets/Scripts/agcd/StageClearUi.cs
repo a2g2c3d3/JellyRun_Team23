@@ -13,6 +13,7 @@ public class StageClearUi : MonoBehaviour
     [SerializeField] private GameObject[] popupPanel;
     private int stageNum = 0;
     private bool stageChanged = false;
+    AudioSource audioSource;
 
     void Start()
     {
@@ -39,7 +40,6 @@ public class StageClearUi : MonoBehaviour
     public void ChangeStage()
     {
         stageNum++;
-        Debug.LogError(stageNum);
 
         if (stageNum == 5)
         {
@@ -61,7 +61,7 @@ public class StageClearUi : MonoBehaviour
         AudioListener.pause = true;
         popupPanel[stageNum - 1].SetActive(true);
         textMeshProUGUI[stageNum - 1].gameObject.SetActive(true);
-
+        
         _player.speed = 25;
         PatternManager.Instance.timer = 3;
 
