@@ -20,7 +20,6 @@ public class SettingPopupUi : MonoBehaviour
     {
         if (Instance == null)
             Instance = this;
-        DontDestroyOnLoad(gameObject);
     }
     private void Start()
     {
