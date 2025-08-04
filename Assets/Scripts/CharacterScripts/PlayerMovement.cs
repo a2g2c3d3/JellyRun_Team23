@@ -102,9 +102,7 @@ namespace Player
                     anim.SetTrigger("isDoubleJumping");
                     if (jumpSound != null && audioSource != null)
                     {
-                        audioSource.ignoreListenerPause = true;
                         audioSource.PlayOneShot(jumpSound);
-                       
                     }
                 }
 
