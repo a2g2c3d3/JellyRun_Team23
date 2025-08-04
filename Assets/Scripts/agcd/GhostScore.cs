@@ -1,35 +1,48 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GhostScore : MonoBehaviour
 {
-    [SerializeField] private Image panelImage;        // 깜빡일 이미지
-    [SerializeField] private float flashSpeed = 10f;   // 깜빡임 속도 (커질수록 빠름)
-    [SerializeField] private float maxAlpha = 1f;     // 가장 밝을 때 투명도
-    [SerializeField] private float minAlpha = 0.2f;   // 가장 어두울 때 투명도
+    [Header("패널 및 텍스트")]
+    [SerializeField] private Image panelImage;
+    [SerializeField] private TextMeshProUGUI text;
 
-    private Color originalColor;
+    [Header("깜빡임 설정")]
+    [SerializeField] private float flashSpeed = 2f;
+    [SerializeField] private float maxAlpha = 1f;
+    [SerializeField] private float minAlpha = 0.2f;
+
+    [SerializeField] private Color flashTextColor = Color.yellow; // 깜빡일 때 텍스트 색
+    private Color originalPanelColor;
+    private Color originalTextColor;
 
     void Start()
     {
         if (panelImage != null)
-            originalColor = panelImage.color; // 원래 색 저장
+            originalPanelColor = panelImage.color;
+        if (text != null)
+            originalTextColor = text.color;
     }
 
     void Update()
     {
         if (ScoreManager.Instance != null && ScoreManager.Instance.isBestScore)
         {
-            float alpha = Mathf.Lerp(minAlpha, maxAlpha, Mathf.Abs(Mathf.Sin(Time.time * flashSpeed)));
-            SetAlpha(alpha);
+            float t = Mathf.Abs(Mathf.Sin(Time.time * flashSpeed));
+            float alpha = Mathf.Lerp(minAlpha, maxAlpha, t);
+
+            SetPanelAlpha(alpha);
+            SetTextColor(Color.Lerp(originalTextColor, flashTextColor, t));
         }
         else
         {
-            SetAlpha(originalColor.a); // 평소엔 원래 알파값 유지
+            SetPanelAlpha(originalPanelColor.a);
+            SetTextColor(originalTextColor);
         }
     }
 
-    private void SetAlpha(float alpha)
+    private void SetPanelAlpha(float alpha)
     {
         if (panelImage == null) return;
 
@@ -37,6 +50,10 @@ public class GhostScore : MonoBehaviour
         color.a = alpha;
         panelImage.color = color;
     }
+
+    private void SetTextColor(Color newColor)
+    {
+        if (text == null) return;
+        text.color = newColor;
+    }
 }
-
-

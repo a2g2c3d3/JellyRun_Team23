@@ -7232,7 +7232,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8712289080150672881}
   - component: {fileID: 6259861483945038446}
-  - component: {fileID: 465369099959141132}
   m_Layer: 5
   m_Name: ProgressUI
   m_TagString: Untagged
@@ -7324,20 +7323,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   hp: 0
---- !u!114 &465369099959141132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 60145813153204832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2167c3a5048124e40b013b4c1a77fad5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTransform: {fileID: 2180267172630664461}
-  levelLength: 0
 --- !u!20 &491928362164260421
 Camera:
   m_ObjectHideFlags: 0
@@ -7855,9 +7840,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelImage: {fileID: 4274143537823122405}
+  text: {fileID: 2335095397511648168}
   flashSpeed: 10
-  maxAlpha: 0.6
+  maxAlpha: 1
   minAlpha: 0.2
+  flashTextColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!224 &2037188132053955859
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8032,7 +8019,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 3
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -8098,7 +8085,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 3339025797192383837}
-  bestScoreText: {fileID: 8641279278650328965}
 --- !u!1 &2450150621229620101
 GameObject:
   m_ObjectHideFlags: 0
@@ -9206,7 +9192,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 2335095397511648168}
-  bestScoreText: {fileID: 0}
 --- !u!114 &6353173389328733738
 MonoBehaviour:
   m_ObjectHideFlags: 0
