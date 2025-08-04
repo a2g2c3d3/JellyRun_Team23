@@ -39,14 +39,19 @@ public class AudioManager : MonoBehaviour
         sfx.PlayOneShot(slideClip);
     }
 
-    public void PlayBGM(AudioClip clip)
+    public void ScoreSound()
     {
-        bgm.Play(clip);
+        sfx.PlayOneShot(scoreClip);
     }
 
-    public void StopBGM()
+    public void HpSound()
     {
-        bgm.Stop();
+        sfx.PlayOneShot(hpClip);
+    }
+
+    public void BoosterSound()
+    {
+        sfx.PlayOneShot(boosterClip);
     }
 
 }
