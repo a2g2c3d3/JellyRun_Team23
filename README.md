@@ -90,3 +90,53 @@ Unity 기반으로 개발한 쿠키런 스타일의 2D 횡스크롤 러닝 게�
 
 
 ---
+
+## 트러블 슈팅
+
+🎯 Unity 트러블슈팅 사례: 패턴이 겹치거나 화면 안에서 갑자기 나타나는 문제
+🧩 배경
+2D 횡스크롤 러닝 게임을 개발 중이며, BgLooper로 배경이 반복 재생되고, PatternManager를 통해 장애물(패턴)을 일정 간격으로 생성하는 시스템을 구축하고 있었습니다.
+
+csharp
+복사
+편집
+void SpawnPattern()
+{
+    if (patternPrefabs.Length == 0) return;
+
+    int rand = Random.Range(0, patternPrefabs.Length);
+    float spawnX = player.position.x + patternSpacing;
+    Vector3 spawnPos = new Vector3(spawnX, 0f, 0f);
+
+    Instantiate(patternPrefabs[rand], spawnPos, Quaternion.identity);
+}
+🐞 문제 현상
+패턴이 겹쳐서 생성되는 문제
+
+카메라가 보여주는 화면 안에서 패턴이 갑자기 나타나는 현상
+
+⛔ 주로 캐릭터가 장애물에 부딪혀 밀려나거나, 속도가 느려지는 경우 발생
+⛔ 배경은 자연스럽게 흐르지만, 패턴은 고정 간격 생성이기 때문에 시점과 타이밍이 어긋남
+
+🔍 원인 분석
+패턴이 시간 기반 또는 고정 위치로 생성되기 때문에,
+
+플레이어의 실시간 위치를 고려하지 못함
+
+결과적으로 패턴이 현재 시점에서 너무 가까운 곳에 생성되어 시야 안에서 갑자기 등장하거나,
+
+기존 패턴과 겹쳐 생성되는 문제가 발생함
+
+✅ 해결 방법
+🎯 패턴 생성 위치를 플레이어 기준으로 조정
+패턴의 생성 위치를 player.position.x + patternSpacing으로 설정
+→ 즉, 플레이어 기준으로 일정 거리 앞에 생성되도록 변경
+
+patternSpacing은 카메라의 중앙에 있는 플레이어로부터 오른쪽 끝까지의 거리를 의미
+
+🧪 개선 결과
+패턴이 항상 플레이어 앞쪽의 카메라 밖에서 생성되어 자연스럽게 등장
+
+플레이어가 속도가 느려지거나 밀려나도 겹치지 않음
+
+게임의 시각적 안정성과 난이도 예측성이 향상됨
