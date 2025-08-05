@@ -97,9 +97,7 @@ Unity 기반으로 개발한 쿠키런 스타일의 2D 횡스크롤 러닝 게�
 🧩 배경
 2D 횡스크롤 러닝 게임을 개발 중이며, BgLooper로 배경이 반복 재생되고, PatternManager를 통해 장애물(패턴)을 일정 간격으로 생성하는 시스템을 구축하고 있었습니다.
 
-csharp
-복사
-편집
+
 void SpawnPattern()
 {
     if (patternPrefabs.Length == 0) return;
