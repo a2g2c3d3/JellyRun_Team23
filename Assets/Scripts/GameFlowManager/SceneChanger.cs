@@ -55,8 +55,6 @@ public class SceneChanger : MonoBehaviour
         EditorApplication.isPlaying = false;
 #else
     Application.Quit();
-
-    }
 #endif
     }
 

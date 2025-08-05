@@ -20,7 +20,7 @@ public class GameOverUI : MonoBehaviour
     {
         
         Time.timeScale = 1f;
-        
+
         //ScoreManager.Instance.SaveBestScore();
         //ScoreManager.Instance.LoadBestScore();
         LoadScene(GameScene.LobyScene);

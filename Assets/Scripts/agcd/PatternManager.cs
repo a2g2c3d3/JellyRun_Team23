@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class PatternManager : MonoBehaviour
 {
@@ -22,15 +23,27 @@ public class PatternManager : MonoBehaviour
         }
     }
 
-    void Update()
+    private void Start()
     {
-        timer -= Time.deltaTime;
-        if (timer <= 0f)
+        StartCoroutine(SpawnPatternRoutine());
+    }
+    IEnumerator SpawnPatternRoutine()
+    {
+        while (true)
         {
             SpawnPattern();
-            timer = patternSpawnInterval;
-            Debug.LogWarning("멋진코딩");
+            yield return new WaitForSeconds(patternSpawnInterval); // 2초 간격
         }
+    }
+
+    void Update()
+    {
+        //timer -= Time.deltaTime;
+        //if (timer <= 0f)
+        //{
+        //    SpawnPattern();
+        //    timer = patternSpawnInterval;
+        //}
     }
 
     void SpawnPattern()
