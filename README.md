@@ -88,13 +88,13 @@ Unity 기반으로 개발한 쿠키런 스타일의 2D 횡스크롤 러닝 게�
 
 ## 🧱 폴더 구조
 Assets/
-├── Animations/        # 애니메이션 관련 에셋 (.anim, AnimatorController 등)
-├── External/          # 외부 무료 에셋 (스프라이트, 오디오 등)
-├── Prefabs/           # 프리팹 오브젝트 모음
-├── Scenes/            # Unity 씬 파일들 (.unity)
-├── Scripts/           # 전체 C# 스크립트
-├── Sound/             # 효과음(SFX), 배경음(BGM) 등 오디오 파일
-└──  TextMesh Pro/      # TextMesh Pro 관련 설정 및 폰트 에셋
+├── Animations/        # 애니메이션 관련 에셋 (.anim, AnimatorController 등)  
+├── External/          # 외부 무료 에셋 (스프라이트, 오디오 등)  
+├── Prefabs/           # 프리팹 오브젝트 모음  
+├── Scenes/            # Unity 씬 파일들 (.unity)  
+├── Scripts/           # 전체 C# 스크립트  
+├── Sound/             # 효과음(SFX), 배경음(BGM) 등 오디오 파일  
+└──  TextMesh Pro/      # TextMesh Pro 관련 설정 및 폰트 에셋  
 ---
 
 ## 트러블 슈팅
